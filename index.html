@@ -35,15 +35,29 @@
             <nav>
         </div>
     </div>
-</div>
+    </div>
     <div class="section">
         <img src="image/FIRSTIMG.jpg"  target="_blank">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellat quas ipsam veniam repellendus laborum nulla nostrum laboriosam minus beatae! Tempore ipsum consequatur vel at similique ut cum, quidem voluptas labore quaerat blanditiis, dolorem eius.</p>
-
-
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellat quas ipsam veniam repellendus laborum nulla nostrum laboriosam minus beatae! Tempore ipsum consequatur vel at similique ut cum, quidem voluptas labore quaerat blanditiis, dolorem eius.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellat quas ipsam veniam repellendus laborum nulla nostrum laboriosam minus beatae! Tempore ipsum consequatur vel at similique ut cum, quidem voluptas labore quaerat blanditiis, dolorem eius.</p>
     </div>
     
     <div class="footer"></div>
 
+
+
+
+
+    <script type="text/javascript">
+        $(function() {
+          $(window).scroll(function() {
+            if ($(this).scrollTop() > 0)  {          /* 要滑動到選單的距離 */
+               $('.hder').addClass('hder_twocolor');   /* 幫選單加上固定效果 */
+            } else {
+              $('.hder').removeClass('hder_twocolor'); /* 移除選單固定效果 */
+            }
+          });
+        });
+    </script>
 </body>
 </html>
