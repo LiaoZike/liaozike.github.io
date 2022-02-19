@@ -8,9 +8,13 @@
     position: fixed;
     width: 100%;
 }
+.hder_twocolor{
+    background-color: #ccf;
+}
 .header{
-    width: 100%;
-    background-color: #eeb;
+    width: 1500px;
+    margin: auto;
+    background-color: #ccc;
     overflow: hidden;
     color:black;
 }
@@ -210,4 +214,7 @@
 .section img{
     width:100%;
     height: 100vh;
+}
+.section p{
+    font-size: 40px;
 }
