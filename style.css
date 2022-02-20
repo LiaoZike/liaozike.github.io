@@ -1,28 +1,25 @@
-.body{
-    overflow: hidden; height: 100%; 
-    
-}
-
-
 *{
     padding: 0;
     margin: 0;
     list-style: none;
 }
-
-.hder{
+#hder{
     position: fixed;
     width: 100%;
 }
-.hder_twocolor{
-    background-color: #ccf;
+.sticky{
+    transition:all .7s;
+    background-color: #be8d5f;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .header{
     width: 1500px;
     margin: auto;
-    background-color: #ccc;
     overflow: hidden;
     color:black;
+    background-color: #eee;
 }
 /* 左上角LOGO設定 */
 .logo{
@@ -160,8 +157,74 @@
     0px 210px 0px #fa0,0px 280px 0px #fa0,
     0px 350px 0px #fa0,0px -70px 0px #fa0;
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:770px) and (max-width:1200px){
     .header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        
+    }
+    .menu_btn{
+        display: none;
+    }
+    .menu a::after{
+        display: none;
+    }
+    .logo{
+        margin: 0;
+        width:36%;
+    }
+    .logo img{
+        margin:0;
+    }
+    .menu{
+        margin-right: 0;
+        left: 0;
+        padding: 0;
+        margin-right: 0%;
+        display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        font-size: 0;
+    }
+    .menu a{
+        width: 200px;
+        display:inline-block;
+        text-align: center;
+        margin: 0;
+        padding: 0 5px;
+        /* padding: 0 10px 0 0; */
+        height: auto;
+        width: 80px;
+        color:#000;
+        background-color: transparent;
+        border-bottom: 1.5px solid transparent;
+    }
+    .menu a:hover{
+        transition: all .5s;
+        height: auto - 3px;
+        background-color: #555;
+        color:#eee;
+        border-bottom: 1.5px solid #f00;
+    }
+    #hder {
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .header{
+        width: 100%;
         position: fixed;
         background-color: transparent;
         position: relative;
@@ -177,7 +240,7 @@
     }
     .logo{
         margin-left: 5%;
-        width:25%;
+        width:20%;
     }
     .menu{
         left: 0;
@@ -208,17 +271,128 @@
         color:#eee;
         border-bottom: 1.5px solid #f00;
     }
-    .hder {
+    #hder {
         display: flex;
         position: fixed;
         width: 100%;
     }
 }
 
-.section img{
-    width:100%;
-    height: 100vh;
+.section1 {
+    background-color: #deb887b9;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(80vh);
+    background-size:100%;
 }
-.section p{
-    font-size: 40px;
+
+.Welcome{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+.Welcome img{
+    display: block;
+    width: 100%;
+    border: 1px solid #efa;
+    margin: auto;
+    border-radius:1px;
+    cursor: help;
+}
+.Welcome_btn{
+    background-color: #fff;
+    box-shadow: 0 0 3px #fb0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center  ;
+    margin: 40px auto 10px auto;
+    width:70%;
+    height: 20%;
+    border-radius:8px;
+}
+.Welcome_btn p{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center  ;
+    font-size: 25px;
+    color:#111;
+}
+.Welcome_btn :hover{
+    border-radius:8px;
+    transition: all .5s;
+    background-color: rgb(98, 172, 241);
+    cursor: pointer;
+
+}
+.sect1_more{
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    text-shadow: 0 0 .5px rgb(236, 0, 59);
+    opacity: 80%;
+}
+
+.section2{
+    background-color: #555;
+    height: 100vh;
+    width: 100%;
+}
+.sect2_title{
+    padding-top: 10px;
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+}
+.sect2-space1{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+.sect2-space1 img{
+    width: 100%;
+    box-shadow: 0 0 15px #111;
+}
+.sect2_sentence{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    background-color: rgba(255, 233, 133, 0.144)  ;
+    border-radius: 10px;
+}
+.sect2_sentence p{
+    font-size: 30px;
+}
+
+@media screen and (min-width:768px){
+    .Welcome_btn p{
+        font-size: 50px;
+    }
+    .sect1_more{
+        margin-top: 120px;
+        margin-bottom: 130px;
+    }
+    .section1 {
+        height: 100%;
+    }
+    .sect2-space1{
+        
+        width: 20%;
+    }
+    .sect2_sentence p{
+        font-size: 60px;
+    }
 }
