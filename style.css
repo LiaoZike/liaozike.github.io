@@ -376,7 +376,6 @@
 .sect2_sentence p{
     font-size: 30px;
 }
-
 @media screen and (min-width:768px){
     .Welcome_btn p{
         font-size: 50px;
