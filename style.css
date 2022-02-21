@@ -285,7 +285,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: calc(80vh);
+    height: 80vh;
     background-size:100%;
 }
 
@@ -340,13 +340,12 @@
     text-align: center;
     margin-top: 100px;
     text-shadow: 0 0 .5px rgb(236, 0, 59);
-    opacity: 80%;
 }
-
 .section2{
     background-color: #555;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    padding-bottom: 50px;
 }
 .sect2_title{
     padding-top: 10px;
@@ -376,8 +375,16 @@
 .sect2_sentence p{
     font-size: 30px;
 }
+
 @media screen and (min-width:768px){
+    .Welcome{
+        height: 100%;
+    }
+    .Welcome_btn{
+        height: 100%;
+    }
     .Welcome_btn p{
+        padding: 50px;
         font-size: 50px;
     }
     .sect1_more{
@@ -386,6 +393,7 @@
     }
     .section1 {
         height: 100%;
+        
     }
     .sect2-space1{
         
