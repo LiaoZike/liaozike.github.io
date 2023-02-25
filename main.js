@@ -1,3 +1,4 @@
+
 //手機板選單
 var button = document.querySelector('.aboutme');
 var ckbox = document.querySelector('.menu_control')
@@ -11,10 +12,18 @@ window.onscroll = function() {myFunction()};
 var hder = document.getElementById("hder"); 
 var sticky = hder.offsetHeight - 50;
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
+    var nowYset=window.pageYOffset; /*螢幕頂端位置*/
+    var nowXBTset=nowYset+window.innerHeight /*螢幕底端位置*/
+    var sect1Yset=document.querySelector('.section1').offsetHeight; /*section1的底端位置(高度)*/
+    var sect2Yset=document.querySelector('.section2').offsetHeight; /*section2的底端位置(高度)*/
+    if (nowYset >= sticky+5) {
         hder.style['background-color']='rgb('+stackR+','+stackG+','+stackB+')';
     } else {
         hder.style['background-color']='rgb('+180+','+180+','+180+')';
+    }
+    if(nowXBTset >= sect1Yset && nowYset<=sect2Yset){
+        console.log(nowYset-100/sect2Yset*50-50+"%")
+        $('.sect2_title').css('left',nowYset/sect2Yset*50-50+'%')
     }
 }
 
@@ -71,6 +80,8 @@ $(document).ready(function(){
         if (window.pageYOffset >= sticky) {
             hder.style['background-color']='rgb('+stackR+','+stackG+','+stackB+')';
         }
+        //------------------------------
+
         
     })
 });
