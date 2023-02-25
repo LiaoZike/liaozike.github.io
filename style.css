@@ -170,16 +170,17 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-size:100%;
 }
 .sect1_img{
    /*position: fixed;*/
    
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-image: url('TEST.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('background.jpg'); /*圖片*/
+    /*background-color: rgb(255, 253, 250) ;*/
     height: 100%;
     width: 100%;
     opacity: 80%;
@@ -187,36 +188,35 @@
 }
 
 .Welcome{
-    padding-top: 50px;
-    display: block;
-    width: 90%;
-    height: 100%;
-    margin: auto;
     position: absolute;
-    top:15%;
+    height: 100%;
+    width: 90%;
+    display: block;
+    top:0%;
     left: 50%;
     transform: translate(-50%, 0%);
-    opacity: 85%;
+    opacity: 95%;
 }
 .Welcome img{
+    margin-top: 200px;
+    margin-bottom: 130px;
     border-radius:10px;
     display: block;
     width: 100%;
     border: 3px solid rgb(0, 0, 0);
     box-shadow: 0 0 15px red;
-    margin: auto;
     cursor: help;
-    opacity: 85%;
+    opacity: 45%;
     
 }
-.Welcome_btn{
-    background-color: #ffffff63;
+.Welcome_btn{   
+    background-color: #ffffff8f;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin: 40px auto 10px auto;
-    width:70%;
+    width: 70%;
     height: 20%;
     border-radius:2px;
     position: relative;
@@ -344,7 +344,7 @@
     text-align: center;
     text-shadow: 0 0 5px rgb(144, 144, 144);
     position: absolute;
-    bottom: 20%;
+    bottom: 8%;
     color:#ffffff
 }
 .sect1_space{
@@ -354,38 +354,39 @@
     width: 100%;
 }
 .section2{
-    background-color: #555;
-    height: 80vh;
+    background-color: #111;
+    height: 50vh;
     width: 100%;
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
 }
 .sect2_title{
-    padding-top: 10px;
+    padding-top: 100px;
     font-size: 50px;
-    width: 100%;
+    width: 50%;
     text-align: center;
+    color:rgb(255, 255, 96);
+    margin:auto;
+    position: relative;
+    left: -50%;
+    transition: all .5s;
+    font-size: 10px;
 }
-.sect2-space1{
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
-.sect2-space1 img{
-    display: flex;
-    width: 70%;
-    box-shadow: 0 0 15px #111;
+.sect2_title p{
+    margin: 40px;
 }
 .sect2_sentence{
-    margin: auto;
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: rgba(255, 233, 133, 0.144)  ;
     border-radius: 10px;
+    color:yellow;
 }
 .sect2_sentence p{
+    display: block;
     font-size: 30px;
 }
 
@@ -452,25 +453,23 @@
         position: fixed;
         width: 100%;
     }
-    .Welcome{
-        height: 100%;
-    }
     .Welcome_btn{
         height: 100px;
     }
-    .sect1_more{
-    }
     .section1 {
-        height: 1000px;
-        /*padding-top: 52px;*/
+        height: 100vh;
         
     }
-    .sect2-space1{
-        
-        width: 20%;
+    .sect2_title{
+        font-size: 50px;
     }
     .sect2_sentence p{
-        font-size: 60px;
+        font-size: 50px;
+
+    }
+    .sect2_sentence{
+        font-size: 50px;
+
     }
 }
 
