@@ -7,7 +7,7 @@
     <link rel="icon" href="media/logo.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
     <linK rel="stylesheet" href="reset.css">
-    <title>LZK Website</title>
+    <title>Website 個人網頁</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
@@ -29,8 +29,8 @@
                 <a href="index.html">首頁</a>
                 <a href="#loc_sect2" class="aboutme">關於我</a>
                 <a href="index.html">證照</a>
-                <a href="index.html">實作</a>
                 <a href="https://liao-zike.github.io/index.html">小遊戲</a>
+                <a href="log.html">網站維護</a>
                 <a href="index.html">筆記</a>
                 <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
             <nav>
@@ -40,6 +40,7 @@
     <style>
     </style>
     <!--首頁-->
+    <div class="content">
     <div class="section1">
         <img class="sect1_img" alt="">
         <div class="Welcome">
@@ -55,11 +56,14 @@
                 </div>
             </div>
             <div class="sect1_more">↓ 往下查看更多 ↓</div>
-            <a name="loc_sect2"></a>
-            <div class="sect1_space">SPACE</div>
         </div>
+        
+        <a name="loc_sect2"></a>
+        <div class="sect1_space">SPACE</div>
         <div class="sect1_special">
-            123
+            <div class="sect1_special_R">R</div>
+            <div class="sect1_special_G">G</div>
+            <div class="sect1_special_B">B</div>
         </div>
         <style>
             .sect1_special{
@@ -71,17 +75,25 @@
                 left:-50%;
                 transform: translate(-50%, 0%);
                 border-radius: 5px;
-                transition: .5s;
+                transition: .6s;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                font-size: 50px;
+                font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+
             }
         </style>
     </div>
     <div class="section2">
-        <div class="sect2_title"><p>關於我</p></div>
-        <div class="sect2-space1">
-            <img src="media/myphoto.jpg" alt="myphoto">
+        <div class="sect2_title">
+            <p>關於我</p>
+            <p>aboutme</p>
         </div>
         <div class="sect2_sentence">
-            <p></p>
+            <p>Hi！，我是一位就讀資訊工程的學生，對於軟體開發方面非常感興趣。透過學習程式設計、資料結構和演算法等技能，我已經瞭解了如何設計和測試軟體系統。在學習過程中，追求知識的豐富性和深度，並且對新技術持開放態度。</p>
+            <br>
+            (以上由ChatGPT提供)
         </div>
     </div>
     <div class="aaa"  style="font-size: 50px;">
@@ -89,12 +101,11 @@
     </div>
     <div style="font-size: 50px;">
     </div>
+    </div>
     <div class="footer"></div>
 
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="source/jquery-3.6.3.min.js"></script>
+    <script src="source/ocomotive-scroll.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
