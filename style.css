@@ -24,13 +24,14 @@
     margin: auto;
     overflow: hidden;
     color:black;
+    height: 53px;
 }
 /* 左上角LOGO設定 */
 .logo{
     width:80%;
     margin-right: 2%;
     display: flex;
-    height: auto;
+    height: 100%;
 }
 .logo img{
     padding: 3px 0 0 5px ;
@@ -50,8 +51,12 @@
     text-decoration: none;
     font-family: 'Noto Sans TC', sans-serif;
 }
+.logo a p{
+    display: block;
+}
 /* 控制選項 */
 #menu_control{
+    display: none;
     position: absolute;
     opacity: 0;
 }
@@ -170,7 +175,7 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     background-size:100%;
 }
 .sect1_img{
@@ -181,7 +186,7 @@
     background-attachment: fixed;
     background-image: url('background.jpg'); /*圖片*/
     /*background-color: rgb(255, 253, 250) ;*/
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     opacity: 80%;
     z-index: -1;
@@ -198,8 +203,7 @@
     opacity: 95%;
 }
 .Welcome img{
-    margin-top: 200px;
-    margin-bottom: 130px;
+    margin-top: 20vh;
     border-radius:10px;
     display: block;
     width: 100%;
@@ -217,7 +221,7 @@
     text-align: center;
     margin: 40px auto 10px auto;
     width: 70%;
-    height: 20%;
+    height: 10%;
     border-radius:2px;
     position: relative;
 }
@@ -234,7 +238,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center  ;
-    font-size: 25px;
+    font-size: 3.5vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:#111;
 }
@@ -337,14 +341,14 @@
 .sect1_more{
     width: 100%;
     height: auto;
-    font-size: 30px;
+    font-size: 4vw;
     display:flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     text-shadow: 0 0 5px rgb(144, 144, 144);
     position: absolute;
-    bottom: 8%;
+    bottom: 5%;
     color:#ffffff
 }
 .sect1_space{
@@ -453,12 +457,19 @@
         position: fixed;
         width: 100%;
     }
+    
+    .Welcome img{
+        margin-top: 200px;
+    }
     .Welcome_btn{
         height: 100px;
     }
     .section1 {
         height: 100vh;
-        
+    }
+    
+    .sect1_more{
+        font-size: 2vw;
     }
     .sect2_title{
         font-size: 50px;
