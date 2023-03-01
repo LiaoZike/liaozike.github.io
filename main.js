@@ -22,7 +22,7 @@ function myFunction() {
         hder.style['background-color']='rgb('+180+','+180+','+180+')';
     }
     if(nowXBTset >= sect1Yset && nowYset<=sect2Yset){
-        console.log(nowYset-100/sect2Yset*50-50+"%")
+        console.log(nowYset/sect2Yset*50-50+20+'%')
         $('.sect2_title').css('left',nowYset/sect2Yset*50-50+'%')
     }
 }
@@ -76,7 +76,7 @@ $(document).ready(function(){
         stackR=Math.floor(Math.random()*256);
         stackG=Math.floor(Math.random()*256);
         stackB=Math.floor(Math.random()*256);
-        $('.section1').css('background-color','rgb('+stackR+','+stackG+','+stackB+')');
+        $('.section1').css('background-color','rgba('+stackR+','+stackG+','+stackB+',10%)');
         if (window.pageYOffset >= sticky) {
             hder.style['background-color']='rgb('+stackR+','+stackG+','+stackB+')';
         }
