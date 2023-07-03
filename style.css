@@ -5,6 +5,48 @@
     scroll-behavior: smooth;
     
 }
+
+/************************/
+/**       滾動條       **/
+/************************/
+body::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+  
+body::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #969695; 
+    border-radius: 4px; 
+}
+  
+body::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #1f1f20bd; 
+}
+
+body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(234, 234, 234);
+}
+
+.coolbar::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+  
+.coolbar::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #2f72ee; 
+    border-radius: 4px; 
+}
+  
+.coolbar::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #5252ff; 
+}
+
+.coolbar::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(170, 249, 246);
+}
+
 #hder{
     position: fixed;
     width: 100%;
@@ -144,13 +186,14 @@
     color:#000;
     transition: .5s;
     left: -100%;
+    overflow: auto;
 }
 .menu a{
     background-color: #222;
+    color:#fff;
     text-decoration: none;
     line-height: 50px;
     font-size: 20px;
-    color:#fff;
     margin: 0px 15px;
     padding: 15px 25px;
     display: block;
@@ -180,6 +223,7 @@
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     background-size:100%;
+    overflow: hidden;
 }
 .sect1_img{
     background-image: url('background.jpg'); /*圖片*/
@@ -353,46 +397,85 @@
     color:#ffffff
 }
 .section2{
-    background-color: #111;
-    
+    background-color: #222;
     opacity: 100%;
-    height: 50vh;
+    height: calc(200vh - 53px);
     width: 100%;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
-}
-.sect2_title{
-    padding-top: 100px;
-    font-size: 50px;
-    width: 50%;
-    text-align: center;
-    color:rgb(255, 255, 96);
-    margin:auto;
     position: relative;
-    left: -50%;
-    transition: all .5s;
-    font-size: 10px;
+    overflow:hidden;
+    overflow-y:auto;
+}
+.sect2_content{
+    color:#fff;
+    height: calc(100vh - 53px); 
+    width: 100%;
+} /*重要*/
+
+.sect2_title{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    box-shadow:0px 10px 10px rgb(251, 216, 136);
 }
 .sect2_title p{
-    margin: 40px;
-}
-.sect2_sentence{
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 233, 133, 0.144)  ;
-    border-radius: 10px;
-    color:yellow;
-}
-.sect2_sentence p{
     display: block;
-    font-size: 30px;
+    width: 100%;
+    position: relative;
+    color:#eee; /*10vh*/
+    font-size: min(15vh,15vw); 
+    -webkit-text-stroke: 1px rgb(251, 245, 152);  
+    text-shadow: 0px 0px 15px rgb(255, 153, 0);
+
+    margin: 5px;
+}
+.sect2_title p:nth-child(1){
+    left:0%;
+}
+.sect2_title p:nth-child(2){
+    right: 00%;
+}
+
+.sect2_sentence{
+    background-color: rgba(251, 232, 149, 0.144)  ;
+    border-radius: 25px;
+    color:rgb(255, 255, 255);
+    padding: 2%;
+    margin: 5px;
+    margin-top: 40px;
+    height: calc(100vh - 2 * min(15vh,15vw) - 40%);
+    font-size: 20px;
+}
+.GoTop{
+    right: 0%;
+    position: fixed;
+    bottom: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color:aliceblue;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    text-decoration: none;
+    transition: .2s ease-in;
+    opacity: 0%;
+}
+.GoTop:hover{
+    background-color: rgb(240, 202, 154);
 }
 
 /**********   平板規格以上 (桌機)   **********/
 @media screen and (min-width:880px) { 
+    
+    .sect2_title{
+        margin-top: max(5%,100px);
+    }
     .header{
         width: 100%;
         position: fixed;
@@ -468,22 +551,18 @@
     .sect1_more{
         font-size: 2vw;
     }
-    .sect2_title{
-        font-size: 50px;
-    }
-    .sect2_sentence p{
-        font-size: 50px;
-
-    }
-    .sect2_sentence{
-        font-size: 50px;
-
+    .GoTop{
+        height: 80px;
+        width: 80px;
+        font-size: 25px;
+        right: -100px;
+        bottom: 15px;
     }
 }
 
 
 /**********   PC規格以上   **********/
-@media screen and (min-width:1200px){
+@media screen and (min-width:1250px){
     .logo{
         margin-left: 5%;
         width:20%;
@@ -500,3 +579,4 @@
         font-size: 2.5vw;
     }
 }
+
