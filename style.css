@@ -3,9 +3,17 @@
     margin: 0;
     list-style: none;
     scroll-behavior: smooth;
-    
+    /*transition: left .1s, right .1s; */
 }
-
+body{
+    scroll-behavior: smooth;
+}
+div {
+    -webkit-tap-highlight-color: transparent; /* Safari, iOS */
+    -moz-tap-highlight-color: transparent; /* Firefox */
+    -ms-tap-highlight-color: transparent; /* IE */
+    tap-highlight-color: transparent; /* 其他浏览器 */
+  }
 /************************/
 /**       滾動條       **/
 /************************/
@@ -51,7 +59,8 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     position: fixed;
     width: 100%;
     z-index: 5;
-    background-color: #BBB;
+    /*background-color: #BBB; */
+    background-color: transparent;
     transition:all .7s;
 }
 .sticky{
@@ -226,7 +235,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     overflow: hidden;
 }
 .sect1_img{
-    background-image: url('background.jpg'); /*圖片*/
+    background-image: url('./media/background.jpg'); /*圖片*/
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -234,7 +243,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     opacity: 80%;
-    z-index: -1;
+    z-index: -3;
 }
 
 .Welcome{
@@ -256,7 +265,6 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     box-shadow: 0 0 15px red;
     cursor: help;
     opacity: 45%;
-    
 }
 .Welcome_btn{   
     background-color: #ffffff8f;
@@ -276,6 +284,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     overflow: hidden;
     position: relative;
     user-select:none;
+    transition: all .5s ease;
 }
 .Welcome_btn p{
     height: 100%;
@@ -288,17 +297,22 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     color:#111;
 }
 .Welcome_btn :hover{ 
+    transform: scale(1.02);
     box-shadow: 0 0 10px #ff0;
-    background:  #ff0;
+    background-color: #e3ea8a;
     border-radius:8px;
-    transition: all .45s;
     cursor: pointer;
     box-shadow: 0 0 5px #ffe100,
     0 0 25px #ffe100,
     0 0 50px #ffe100,
     0 0 100px #ffe100;
-    transition: all .45s;
 }
+.Welcome_btn :active{
+    background-color: #e3ea8a;
+}
+.Welcome_btn :focus {
+    background-color: #e3ea8a;
+  }
 .Welcome_btn span {
     position: absolute;
     display: block;
@@ -398,8 +412,9 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
 }
 .section2{
     background-color: #222;
+    background-color: #2222228e;
     opacity: 100%;
-    height: calc(200vh - 53px);
+    height: calc(250vh - 53px);
     width: 100%;
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
     position: relative;
@@ -425,15 +440,16 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     color:#eee; /*10vh*/
     font-size: min(15vh,15vw); 
     -webkit-text-stroke: 1px rgb(251, 245, 152);  
-    text-shadow: 0px 0px 15px rgb(255, 153, 0);
-
+    /* text-shadow: 0px 0px 15px rgb(255, 153, 0); */
+    text-shadow: 0px 0px 8px rgb(255, 217, 0);
     margin: 5px;
+    transition: left linear .3s, right linear .3s;
 }
 .sect2_title p:nth-child(1){
-    left:0%;
+    left:-100%;
 }
 .sect2_title p:nth-child(2){
-    right: 00%;
+    right: -100%;
 }
 
 .sect2_sentence{
@@ -443,8 +459,20 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     padding: 2%;
     margin: 5px;
     margin-top: 40px;
-    height: calc(100vh - 2 * min(15vh,15vw) - 40%);
-    font-size: 20px;
+    /* height: calc(100vh - 2 * min(15vh,15vw) - 53 - 5 - 40%); */
+    
+    box-shadow: 0 0 10px rgb(250, 233, 186);
+    font-size: min(50px,3vh,5vw); /*20px 3vh*/
+    /*transform: scale(0);*/
+    transition: transform linear .1s,box-shadow linear .3s;
+}
+.sect2_sentence a{
+    color:#00fff7;
+    transition: all .5s;
+}
+.sect2_sentence a:hover{
+    background-color: rgb(250, 151, 89);
+    color:white;
 }
 .GoTop{
     right: 0%;
@@ -557,6 +585,9 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
         font-size: 25px;
         right: -100px;
         bottom: 15px;
+    }
+    .sect2_title p{
+        text-shadow: 0px 0px 15px rgb(255, 153, 0);
     }
 }
 
