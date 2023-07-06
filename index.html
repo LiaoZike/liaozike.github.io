@@ -1,126 +1,619 @@
-<!DOCTYPE html>
-<html lang="zh-Hant-TW" >
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/logo.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="style.css">
-    <linK rel="stylesheet" href="reset.css">
-    <title>Website 個人網頁</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!--導覽列-->
-    <div id="hder">
-    <div class="header">
-        <input type="checkbox" id="menu_control" class="menu_control">
-        <div class="logo">
-                <a href="index.html"><img src="media/computer-life.png" height="45px" alt="Logo"></a>
-                <a href="index.html"><p>Liao-Zike</p></a>
-        </div>
-        <label for="menu_control" class="menu_btn">
-            <div class="menu_btn_burger"></div>
-        </label>
-        <div class="menu" >
-            <nav>
-                <a href="index.html">首頁</a>
-                <a href="./aboutme.html" class="aboutme">關於我</a>
-                <a href="index.html">證照</a>
-                <a href="https://liao-zike.github.io/index.html">小遊戲</a>
-                <a href="log.html">網站維護</a>
-                <a href="index.html">筆記</a>
-                <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
-            <nav>
-        </div>
-    </div>
-    </div>
-    <style>
-    </style>
-    <a name="top"></a>
-    <!--首頁-->
-    <div class="content">
-    <div class="section1">
-        <img class="sect1_img" alt="">
-        <div class="Welcome">
-            <img src="media/Hello.gif" alt="" style="-webkit-user-drag: none;">
-            <!-- <input class="Welcome_btn" type="button" value="Hi (touch me!)">。 -->
-            <div class="Welcome_btn">
-                <div class="Welcome_btn_div">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <p>Hi (touch me!)</p>
-                </div>
-            </div>
-            <div class="sect1_more">↓ 往下查看更多 ↓</div>
-        </div>
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    /*transition: left .1s, right .1s; */
+}
+body{
+    scroll-behavior: smooth;
+}
+div {
+    -webkit-tap-highlight-color: transparent; /* Safari, iOS */
+    -moz-tap-highlight-color: transparent; /* Firefox */
+    -ms-tap-highlight-color: transparent; /* IE */
+    tap-highlight-color: transparent; /* 其他浏览器 */
+}
+/************************/
+/**       滾動條       **/
+/************************/
+body::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+  
+body::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #969695; 
+    border-radius: 4px; 
+}
+  
+body::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #1f1f20bd; 
+}
+
+body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(234, 234, 234);
+}
+
+.coolbar::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+  
+.coolbar::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #2f72ee; 
+    border-radius: 4px; 
+}
+  
+.coolbar::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #5252ff; 
+}
+
+.coolbar::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(170, 249, 246);
+}
+
+#hder{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    /*background-color: #BBB; */
+    background-color: transparent;
+    transition:all .7s;
+}
+.sticky{
+    transition:all .7s;
+    background-color: rgb(68, 68, 68);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.header{
+    width: 1500px;
+    margin: auto;
+    overflow: hidden;
+    color:black;
+    height: 53px;
+}
+/* 左上角LOGO設定 */
+.logo{
+    width:80%;
+    margin-right: 2%;
+    display: flex;
+    height: 100%;
+}
+.logo img{
+    padding: 3px 0 0 5px ;
+    margin-right: 5px;
+    vertical-align: middle; 
+    width:auto;
+}
+.logo a{
+    font-size: 35px;
+    color:#111;
+    text-shadow: 1.5px 1px 0.3px #999;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.logo a p{
+    display: block;
+}
+/* 控制選項 */
+#menu_control{
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+
+/* 漢堡選單 */
+.menu_btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width:40px;
+    height: 40px;
+    background-color: #000;
+    transition: all .5s ease-in-out;
+    border:1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* 漢堡選單-三條線 */
+.menu_btn_burger{
+    width: 30px;
+    height: 2.5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #fb0;
+    transition: all .5s ease-in-out;
+}
+.menu_btn_burger::before,
+.menu_btn_burger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2.5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #fb0;
+    transition: all .5s ease-in-out;
+}
+.menu_btn_burger::before{
+    transform: translateY(-8px);
+}
+.menu_btn_burger::after{
+    transform: translateY(8px);
+}
+
+/* 漢堡選單to打叉動畫 */
+#menu_control:checked ~ .menu_btn .menu_btn_burger{
+    transform:translateX(-40px);
+    transition: .5s;
+    background: transparent;
+    box-shadow: none;
+    box-shadow: 0 0 0px rgb(0, 0, 0);
+    visibility: hidden;
+}
+#menu_control:checked ~ .menu_btn .menu_btn_burger::before{ /*右上斜左下線*/
+    opacity: 1;
+    transform: rotate(45deg)
+    translateX(28px)
+    translateY(-28px);
+    visibility: visible; /* 顯示偽元素 */
+}
+#menu_control:checked ~ .menu_btn .menu_btn_burger::after{ /*左上斜右下線*/
+    transform: rotate(-45deg)
+    translateX(28px)
+    translateY(28px);
+    visibility: visible; /* 顯示偽元素 */
+
+}
+
+#menu_control:checked ~ .menu{
+    left:0px;
+}
+#menu_control:checked ~ .menu a::after{
+    transition: 5s;
+}
+/* 選單設定 */
+.menu{
+    opacity: 95%;
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: #111;
+    color:#000;
+    transition: .5s;
+    left: -100%;
+    overflow: auto;
+}
+.menu a{
+    background-color: #222;
+    color:#fff;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 0px 15px;
+    padding: 15px 25px;
+    display: block;
+    height: 40px;
+}
+.menu a::after{
+    content:'';
+    position: absolute;
+    height: 1px;
+    width:calc(100% - 30px);
+    left: 15px;
+    top: 80px;
+    background-color: #fa0;
+    margin: auto;
+    box-shadow: 0px 70px 0px #fa0,
+    0px 70px 0px #fa0,0px 140px 0px #fa0,
+    0px 210px 0px #fa0,0px 280px 0px #fa0,
+    0px 350px 0px #fa0,0px -70px 0px #fa0;
+}
+
+/*section 和 welcome*/
+.section1 {
+    padding-top: 0px;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    background-size:100%;
+    overflow: hidden;
+}
+.sect1_img{
+    background-image: url('./media/background.jpg'); /*圖片*/
+    background-size: cover;
+    background-position: center;
+    /* -webkit-filter:hue-rotate(180deg) brightness(.3);*/
+    /* -webkit-filter:brightness(.4); */
+    transition: -webkit-filter .1s;
+    /*background-color: rgb(255, 253, 250) ;*/
+    height: calc(var(--vh, 1vh) * 100);
+    width: 100%;
+    opacity: 0.90;
+    z-index: -3;
+}
+.myimg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.Welcome{
+    position: absolute;
+    height: 100%;
+    width: 90%;
+    display: block;
+    top:0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 95%;
+}
+.Welcome img{
+    margin-top: 20vh;
+    border-radius:10px;
+    display: block;
+    width: 100%;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 0 15px red;
+    cursor: help;
+    opacity: 45%;
+}
+.Welcome_btn{   
+    background-color: #ffffff8f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 40px auto 10px auto;
+    width: 70%;
+    height: 10%;
+    border-radius:2px;
+    position: relative;
+}
+.Welcome_btn_div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    user-select:none;
+    transition: all .5s ease;
+}
+.Welcome_btn p{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center  ;
+    font-size: 3.5vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#111;
+}
+.Welcome_btn :hover{ 
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #ff0;
+    background-color: #e3ea8a;
+    border-radius:8px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ffe100,
+    0 0 25px #ffe100,
+    0 0 50px #ffe100,
+    0 0 100px #ffe100;
+}
+.Welcome_btn :active{
+    background-color: #e3ea8a;
+}
+.Welcome_btn :focus {
+    background-color: #e3ea8a;
+  }
+.Welcome_btn span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    /*background: linear-gradient(90deg, transparent, #ff0);*/
+    background: linear-gradient(90deg, transparent, #ff0);
+}
+
+/*選取第一個元素*/
+.Welcome_btn span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 6px;
+    animation: Welcome_btn-anim1 1s linear infinite; /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/    
+}
+.Welcome_btn span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ff0);
+    animation: Welcome_btn-anim2 1s linear infinite;;
+    animation-delay: 0.5s
+     /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/
+}
+.Welcome_btn span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(270deg, transparent, #ff0);
+    animation: Welcome_btn-anim3 1s linear infinite;
+    animation-delay: 1s
+    ;
+
+}
+.Welcome_btn span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #ff0);
+    animation: Welcome_btn-anim4 1s linear infinite;
+    ;
+    animation-delay: 1.5s
+   /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/    
+}
+@keyframes Welcome_btn-anim1 {
+    /*預設值*/
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+@keyframes Welcome_btn-anim2 {
+    /*預設值*/
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+@keyframes Welcome_btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+}
+@keyframes Welcome_btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+  }
+
+
+.sect1_more{
+    width: 100%;
+    height: auto;
+    font-size: 4vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(144, 144, 144);
+    position: absolute;
+    bottom: 5%;
+    color:#ffffff
+}
+.section2{
+    /* background-color: #222;
+    background-color: #2222228e; */
+    opacity: 100%;
+    height: calc(250vh - 53px);
+    width: 100%;
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    position: relative;
+    overflow:hidden;
+    overflow-y:auto;
+}
+.sect2_content{
+    color:#fff;
+    height: calc(100vh - 53px); 
+    width: 100%;
+} /*重要*/
+
+.sect2_title{
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    box-shadow:0px 10px 10px rgb(251, 216, 136);
+}
+.sect2_title p{
+    display: block;
+    width: 100%;
+    position: relative;
+    color:#eee; /*10vh*/
+    font-size: min(15vh,15vw); 
+    -webkit-text-stroke: 1px rgb(251, 245, 152);  
+    /* text-shadow: 0px 0px 15px rgb(255, 153, 0); */
+    text-shadow: 0px 0px 8px rgb(255, 217, 0);
+    margin: 5px;
+    transition: left linear .3s, right linear .3s;
+}
+.sect2_title p:nth-child(1){
+    left:-100%;
+}
+.sect2_title p:nth-child(2){
+    right: -100%;
+}
+
+.sect2_sentence{
+    background-color: rgba(251, 232, 149, 0.144)  ;
+    border-radius: 25px;
+    color:rgb(255, 255, 255);
+    padding: 2%;
+    margin: 5px;
+    margin-top: 40px;
+    /* height: calc(100vh - 2 * min(15vh,15vw) - 53 - 5 - 40%); */
+    
+    box-shadow: 0 0 10px rgb(250, 233, 186);
+    font-size: min(50px,3vh,5vw); /*20px 3vh*/
+    /*transform: scale(0);*/
+    transition: transform linear .1s,box-shadow linear .3s;
+}
+.sect2_sentence a{
+    color:#00fff7;
+    transition: all .5s;
+}
+.sect2_sentence a:hover{
+    background-color: rgb(250, 151, 89);
+    color:white;
+}
+.GoTop{
+    right: 0%;
+    position: fixed;
+    bottom: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color:aliceblue;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    text-decoration: none;
+    transition: .2s ease-in;
+    opacity: 0%;
+}
+.GoTop:hover{
+    background-color: rgb(240, 202, 154);
+}
+
+/**********   平板規格以上 (桌機)   **********/
+@media screen and (min-width:880px) { 
+    
+    .sect2_title{
+        margin-top: max(5%,100px);
+    }
+    .header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+        position: relative;
+        justify-content: space-between;
+        display: flex;
         
-        <a name="loc_sect2"></a>
-        <div class="sect1_special">
-            <div class="sect1_special_R">R</div>
-            <div class="sect1_special_G">G</div>
-            <div class="sect1_special_B">B</div>
-        </div>
-        <style>
-            .sect1_special{
-                width: 80%;
-                height: 50%;
-                background-color: antiquewhite;
-                position: absolute;
-                top:30%;
-                left:-150%;
-                transform: translate(-50%, 0%);
-                border-radius: 5px;
-                transition: .6s;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-around;
-                font-size: 50px;
-                font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    }
+    .menu_btn{
+        display: none;
+    }
+    .menu a::after{
+        display: none;
+    }
+    .logo{
+        margin: 0;
+        width:36%;
+    }
+    .logo img{
+        margin:0;
+    }
+    .menu{
+        left: 0;
+        padding: 0;
+        margin-right: 0%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        font-size: 0;
+    }
+    .menu a{
+        width: 200px;
+        display:inline-block;
+        text-align: center;
+        margin: 0;
+        padding: 0 5px;
+        /* padding: 0 10px 0 0; */
+        height: auto;
+        width: 80px;
+        color:#000;
+        background-color: transparent;
+        border-bottom: 1.5px solid transparent;
+    }
+    .menu a:hover{
+        transition: all .38s;
+        height: auto - 3px;
+        background-color: #555;
+        color:#eee;
+        border-bottom: 1.5px solid #f00;
+    }
+    #hder {
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+    
+    .Welcome img{
+        margin-top: 20vh;
+    }
+    .Welcome_btn{
+        height: 12vh;
+    }
+    .section1 {
+        height: 100vh;
+    }
+    
+    .sect1_more{
+        font-size: 2vw;
+    }
+    .GoTop{
+        height: 80px;
+        width: 80px;
+        font-size: 25px;
+        right: -100px;
+        bottom: 15px;
+    }
+    .sect2_title p{
+        text-shadow: 0px 0px 15px rgb(255, 153, 0);
+    }
+}
 
-            }
-        </style>
-    </div>
-    <div class="section2 coolbar">
-        <div class="sect2_content">
-            <div class="sect2_title">
-                <p>關於我</p>
-                <p>about me</p>
-            </div>
-            <div class="sect2_sentence">
-                <p>你好！歡迎來到我的網站！我是Zi-Ke Liao，一位就讀於資訊工程學系的學生。
-                    在這裡，你可以瀏覽關於我個人介紹的內容，從五專剛開始接觸資訊領域開始，為什麼會想接觸資訊工程，五專學習路程上遇到的事情，還有一些我曾經取得的有趣的事蹟..? 以及專長項目，包括C/C++語言、Python等語言~同時，你也可以看到我過去完成的報告和作品。<br><br>這個網站我會盡可能實現響應式設計（RWD），提供使用者完整體驗環境，不過對於一些極特殊的3C裝置，還是可能會出現跑版問題，請見諒。<br><br> link: <a href="aboutme.html"><點我查看我的自介~ Touch me please.></a>
-                <br><br>
-            </div>
-        </div>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>證照...</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>作品與小遊戲</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>五專_專區</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>匿名信箱(PHP&資料庫)</p>
-    </div>
-    <div style="font-size: 50px;">
-    </div>
-    </div>
-    <div class="footer"></div>
 
-    <a href="#top" class="GoTop">
-        <p>GoTop</p>
-        <p><b>↑</b></p>
-    </a>
-    <script src="source/jquery-3.6.3.min.js"></script>
-    <script src="source/ocomotive-scroll.min.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+/**********   PC規格以上   **********/
+@media screen and (min-width:1250px){
+    .logo{
+        margin-left: 5%;
+        width:20%;
+    }
+    .menu{
+        width: auto;
+        margin-right: 50px;
+    }
+    .menu a{
+        padding: 0 10px;
+        width: 100px;
+    }
+    .Welcome_btn p{
+        font-size: 2.5vw;
+    }
+}
+
