@@ -47,6 +47,7 @@ function myFunction() {
             $('.sect2_sentence').css('transform','scale(0)');
             $('.sect2_title p:nth-child(1)').css('left','-100%')
             $('.sect2_title p:nth-child(2)').css('right','-100%')
+            $('.sect1_img').css('-webkit-filter','brightness(1)');
             if(RGBCHKStateTHR==-1){ //需載入Hello World邊框RGB
                 RGBCHKStateTHR=setInterval(function() {changRGB();},300);
             }
@@ -69,9 +70,11 @@ function myFunction() {
             $('.sect2_content').css('bottom','initial');
             $('.sect2_content').css('top','0px');
             $('.sect2_sentence').css('transform','scale(0)');
+            $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
-        var temp=-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/(document.querySelector('.section2').offsetHeight/2))*100;
-        //console.log(temp+"%")
+        var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100,2);
+        tempOK=(temp/-100*0.8+0.2);
+        $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
         $('.sect2_title p:nth-child(1)').css('left',temp+"%")
         $('.sect2_title p:nth-child(2)').css('right',temp+"%")
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
@@ -82,6 +85,7 @@ function myFunction() {
             $('.sect2_content').css('top','53px');
             $('.sect2_title p:nth-child(1)').css('left','0%');
             $('.sect2_title p:nth-child(2)').css('right','0%');
+            $('.sect1_img').css('-webkit-filter','brightness(0.2)');
             if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
                 clearInterval(RGBCHKStateTHR);
                 RGBCHKStateTHR=-1;
@@ -98,6 +102,7 @@ function myFunction() {
             $('.sect2_content').css('position','absolute');
             $('.sect2_content').css('bottom','0px');
             $('.sect2_content').css('top','initial');
+            $('.sect1_img').css('-webkit-filter','brightness(0.2)');
             if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
                 clearInterval(RGBCHKStateTHR);
                 RGBCHKStateTHR=-1;
@@ -194,7 +199,7 @@ $(document).ready(function(){
         stackR=Math.floor(Math.random()*256);
         stackG=Math.floor(Math.random()*256);
         stackB=Math.floor(Math.random()*256);
-        $('.section1').css('background-color','rgba('+stackR+','+stackG+','+stackB+',10%)');
+        $('.myimg').css('background-color','rgba('+stackR+','+stackG+','+stackB+',1)');
         if (window.scrollY >= sticky) {
             hder.style['background-color']='rgb('+stackR+','+stackG+','+stackB+')';
         }
