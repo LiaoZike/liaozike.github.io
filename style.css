@@ -240,7 +240,6 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     background-position: center;
     /* -webkit-filter:hue-rotate(180deg) brightness(.3);*/
     /* -webkit-filter:brightness(.4); */
-    transition: -webkit-filter .1s;
     /*background-color: rgb(255, 253, 250) ;*/
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
@@ -449,7 +448,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     /* text-shadow: 0px 0px 15px rgb(255, 153, 0); */
     text-shadow: 0px 0px 8px rgb(255, 217, 0);
     margin: 5px;
-    transition: left linear .3s, right linear .3s;
+    transition: left linear .15s, right linear .15s;
 }
 .sect2_title p:nth-child(1){
     left:-100%;
@@ -470,7 +469,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     box-shadow: 0 0 10px rgb(250, 233, 186);
     font-size: min(50px,3vh,5vw); /*20px 3vh*/
     /*transform: scale(0);*/
-    transition: transform linear .1s,box-shadow linear .3s;
+    transition: transform linear .05s,box-shadow linear .5s;
 }
 .sect2_sentence a{
     color:#00fff7;
