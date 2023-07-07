@@ -64,7 +64,7 @@ function myFunction() {
                 RGBCHKStateTHR=setInterval(function() {changRGB();},300);
             }
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},300);
+                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
             $('.sect2_content').css('position','absolute');
             $('.sect2_content').css('bottom','initial');
@@ -72,7 +72,7 @@ function myFunction() {
             $('.sect2_sentence').css('transform','scale(0)');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
-        var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100,2);
+        var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100);
         tempOK=(temp/-100*0.8+0.2);
         $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
         $('.sect2_title p:nth-child(1)').css('left',temp+"%")
@@ -91,10 +91,10 @@ function myFunction() {
                 RGBCHKStateTHR=-1;
             }
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},300);
+                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
         }
-        $('.sect2_sentence').css('transform','scale('+Math.min(1,(nowvYset+53-sect1Yset)/((sect2Yset-sect1Yset)/2))+')');
+        $('.sect2_sentence').css('transform','scale('+(Math.min(1,(nowvYset+53-sect1Yset)/((sect2Yset-sect1Yset)/2))).toFixed(2)+')');
     }else if(nowvYBottomset>sect2Yset){ //[4]
         if(scrollState!=4){ //解決重複效能低問題
             scrollState=4;
@@ -108,7 +108,7 @@ function myFunction() {
                 RGBCHKStateTHR=-1;
             }
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},300);
+                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
         }
     }else{
@@ -168,13 +168,13 @@ var sect2boxNEO=10;
 var sect2boxNEOState=1;
 function changeSect2_box(){
     if(sect2boxNEOState){
-        if(sect2boxNEO+2>40){
+        if(sect2boxNEO+5>40){
             sect2boxNEOState=0;
         }else{
             sect2boxNEO+=2;
         }
     }else{
-        if(sect2boxNEO-2<10){
+        if(sect2boxNEO-5<10){
             sect2boxNEOState=1;
         }else{
             sect2boxNEO-=2;
