@@ -432,7 +432,6 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     color:#fff;
     height: calc(100vh - 53px); 
     width: 100%;
-    -webkit-transform: translateZ(0);
 } /*重要*/
 
 .sect2_title{
