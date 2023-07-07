@@ -13,10 +13,13 @@ var hder = document.getElementById("hder");
 var sticky = hder.offsetHeight - 50;
 var scrollState=0; //
 var deviceHeight=window.innerHeight;
-var sect2boxTHR=-1; var RGBCHKStateTHR=-1;
+var sect2boxTHR=-1; 
+
+/* 暫停使用2023/07/08
+var RGBCHKStateTHR=-1;
 $(document).ready(function(){
     RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-})
+})*/
 function myFunction() {
     deviceHeight=window.innerHeight;
     var nowvYset=window.scrollY; /*螢幕頂端位置*/
@@ -48,9 +51,10 @@ function myFunction() {
             $('.sect2_title p:nth-child(1)').css('left','-100%')
             $('.sect2_title p:nth-child(2)').css('right','-100%')
             $('.sect1_img').css('-webkit-filter','brightness(1)');
+            /*暫停使用2023/07/08
             if(RGBCHKStateTHR==-1){ //需載入Hello World邊框RGB
                 RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-            }
+            }*/
             if(sect2boxTHR!=-1){ //清除關閉關於我介紹邊框閃爍
                 clearInterval(sect2boxTHR); 
                 sect2boxTHR=-1;
@@ -60,9 +64,10 @@ function myFunction() {
         if(scrollState!=2){
             scrollState=2;
             /* console.log("區塊1 --> 區塊2"); */
-            if(RGBCHKStateTHR==-1){
+            
+            /*if(RGBCHKStateTHR==-1){暫停使用2023/07/08
                 RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-            }
+            }*/
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
                 sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
@@ -86,10 +91,11 @@ function myFunction() {
             $('.sect2_title p:nth-child(1)').css('left','0%');
             $('.sect2_title p:nth-child(2)').css('right','0%');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
+            /* 暫停使用2023/07/08
             if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
                 clearInterval(RGBCHKStateTHR);
                 RGBCHKStateTHR=-1;
-            }
+            }*/
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
                 sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
@@ -103,10 +109,12 @@ function myFunction() {
             $('.sect2_content').css('bottom','0px');
             $('.sect2_content').css('top','initial');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
+            
+            /* 暫停使用2023/07/08
             if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
                 clearInterval(RGBCHKStateTHR);
                 RGBCHKStateTHR=-1;
-            }
+            }*/
             if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
                 sect2boxTHR=setInterval(function() {changeSect2_box();},500);
             }
@@ -114,10 +122,11 @@ function myFunction() {
     }else{
         if(scrollState!=5){
             scrollState=5;
+            /* 暫停使用2023/07/08
             if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
                 clearInterval(RGBCHKStateTHR);
                 RGBCHKStateTHR=-1;
-            }
+            }*/
             if(sect2boxTHR!=-1){ //需載入Hello World邊框RGB
                 clearInterval(sect2boxTHR);
                 sect2boxTHR=-1;
@@ -132,8 +141,9 @@ function myFunction() {
 }
 
 //Welcome歡迎RGB
+/*
 var R=255,G=0,B=0,RGBState=1,RGBStep=5;
-function changRGB(){
+function changRGB(){暫停使用2023/07/08
     if(RGBState==1){ //R->G
         if(R-RGBStep<0||G+RGBStep>255){
             R=0;
@@ -164,6 +174,7 @@ function changRGB(){
     }
     $('.Welcome img').css('box-shadow','0 0 10px rgb('+R+','+G+','+B+')'+',0 0 10px rgb('+R+','+G+','+B+')'+',0 0 20px rgb('+R+','+G+','+B+')'+',0 0 55px rgb('+R+','+G+','+B+')');
 }
+*/
 var sect2boxNEO=10;
 var sect2boxNEOState=1;
 function changeSect2_box(){
