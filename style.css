@@ -7,6 +7,8 @@
 }
 body{
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
 }
 div {
     -webkit-tap-highlight-color: transparent; /* Safari, iOS */
@@ -430,6 +432,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     color:#fff;
     height: calc(100vh - 53px); 
     width: 100%;
+    -webkit-transform: translateZ(0);
 } /*重要*/
 
 .sect2_title{
@@ -470,7 +473,8 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     font-size: min(50px,3vh,5vw); /*20px 3vh*/
     /*transform: scale(0);*/
     /* transition: transform linear .05s,box-shadow linear .5s; */
-    transition: box-shadow linear .5s;
+    /* transition: box-shadow linear .5s; */
+    transition: transform linear ,box-shadow linear ;
 }
 .sect2_sentence a{
     color:#00fff7;
