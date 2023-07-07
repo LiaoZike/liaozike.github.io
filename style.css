@@ -269,7 +269,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     display: block;
     width: 100%;
     border: 3px solid rgb(0, 0, 0);
-    box-shadow: 0 0 15px red;
+    box-shadow: 0 0 20px rgb(255, 0, 0);
     cursor: help;
     opacity: 45%;
 }
