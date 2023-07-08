@@ -9,17 +9,12 @@ function popup2(e) {
 button.addEventListener('click', popup2);
 //導覽列變色 header/hder
 window.onscroll = function() {myFunction()};
+
 var hder = document.getElementById("hder"); 
 var sticky = hder.offsetHeight - 50;
 var scrollState=0; //
 var deviceHeight=window.innerHeight;
-var sect2boxTHR=-1; 
 
-/* 暫停使用2023/07/08
-var RGBCHKStateTHR=-1;
-$(document).ready(function(){
-    RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-})*/
 function myFunction() {
     deviceHeight=window.innerHeight;
     var nowvYset=window.scrollY; /*螢幕頂端位置*/
@@ -51,26 +46,10 @@ function myFunction() {
             $('.sect2_title p:nth-child(1)').css('left','-100%')
             $('.sect2_title p:nth-child(2)').css('right','-100%')
             $('.sect1_img').css('-webkit-filter','brightness(1)');
-            /*暫停使用2023/07/08
-            if(RGBCHKStateTHR==-1){ //需載入Hello World邊框RGB
-                RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-            }*/
-            if(sect2boxTHR!=-1){ //清除關閉關於我介紹邊框閃爍
-                clearInterval(sect2boxTHR); 
-                sect2boxTHR=-1;
-            }
         }
     }else if(nowvYBottomset>sect1Yset && nowvYset<=sect1Yset-53){
         if(scrollState!=2){
             scrollState=2;
-            /* console.log("區塊1 --> 區塊2"); */
-            
-            /*if(RGBCHKStateTHR==-1){暫停使用2023/07/08
-                RGBCHKStateTHR=setInterval(function() {changRGB();},300);
-            }*/
-            if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
-            }
             $('.sect2_content').css('position','absolute');
             $('.sect2_content').css('bottom','initial');
             $('.sect2_content').css('top','0px');
@@ -91,14 +70,6 @@ function myFunction() {
             $('.sect2_title p:nth-child(1)').css('left','0%');
             $('.sect2_title p:nth-child(2)').css('right','0%');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
-            /* 暫停使用2023/07/08
-            if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
-                clearInterval(RGBCHKStateTHR);
-                RGBCHKStateTHR=-1;
-            }*/
-            if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
-            }
         }
         $('.sect2_sentence').css('transform','scale('+(Math.min(1,(nowvYset+53-sect1Yset)/((sect2Yset-sect1Yset)/2))).toFixed(2)+')');
     }else if(nowvYBottomset>sect2Yset){ //[4]
@@ -109,100 +80,16 @@ function myFunction() {
             $('.sect2_content').css('bottom','0px');
             $('.sect2_content').css('top','initial');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
-            
-            /* 暫停使用2023/07/08
-            if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
-                clearInterval(RGBCHKStateTHR);
-                RGBCHKStateTHR=-1;
-            }*/
-            if(sect2boxTHR==-1){ //需載入Hello World邊框RGB
-                sect2boxTHR=setInterval(function() {changeSect2_box();},500);
-            }
         }
     }else{
         if(scrollState!=5){
             scrollState=5;
-            /* 暫停使用2023/07/08
-            if(RGBCHKStateTHR!=-1){ //清除關閉載入Hello World邊框RGB
-                clearInterval(RGBCHKStateTHR);
-                RGBCHKStateTHR=-1;
-            }*/
-            if(sect2boxTHR!=-1){ //需載入Hello World邊框RGB
-                clearInterval(sect2boxTHR);
-                sect2boxTHR=-1;
-            }
         }
 
     }
-    /*if(nowXBTset >= sect1Yset && nowYset<=sect2Yset){
-        console.log(nowYset/sect2Yset*50-50+20+'%')
-        $('.sect2_title').css('left',nowYset/sect2Yset*50-50+'%')
-    }*/
 }
 
-//Welcome歡迎RGB
-/*
-var R=255,G=0,B=0,RGBState=1,RGBStep=5;
-function changRGB(){暫停使用2023/07/08
-    if(RGBState==1){ //R->G
-        if(R-RGBStep<0||G+RGBStep>255){
-            R=0;
-            G=255;
-            RGBState=2;
-        }else{
-            R-=RGBStep;
-            G+=RGBStep;
-        }
-    }else if(RGBState==2){ //G->B
-        if(G-RGBStep<0||B+RGBStep>255){
-            G=0;
-            B=255;
-            RGBState=3;
-        }else{
-            G-=RGBStep;
-            B+=RGBStep;
-        }
-    }else if(RGBState==3){ //B->R
-        if(B-RGBStep<0||R+RGBStep>255){
-            B=0;
-            R=255;
-            RGBState=1;
-        }else{
-            B-=RGBStep;
-            R+=RGBStep;
-        }
-    }
-    $('.Welcome img').css('box-shadow','0 0 10px rgb('+R+','+G+','+B+')'+',0 0 10px rgb('+R+','+G+','+B+')'+',0 0 20px rgb('+R+','+G+','+B+')'+',0 0 55px rgb('+R+','+G+','+B+')');
-}
-*/
-var sect2boxNEO=10;
-var sect2boxNEOState=1;
-function changeSect2_box(){
-    if(sect2boxNEOState){
-        if(sect2boxNEO+5>40){
-            sect2boxNEOState=0;
-        }else{
-            sect2boxNEO+=2;
-        }
-    }else{
-        if(sect2boxNEO-5<10){
-            sect2boxNEOState=1;
-        }else{
-            sect2boxNEO-=2;
-        }
-    }
-    $('.sect2_sentence').css('box-shadow', '0 0 '+sect2boxNEO+'px rgb(250, 233, 186)');
-}
 //Touch me事件
-/*
-$('.Welcome_btn').click(function(){
-    var a=Math.floor(Math.random()*256);
-    var b=Math.floor(Math.random()*256);
-    var c=Math.floor(Math.random()*256);
-    $('.section1').css('background-color','rgb('+a+','+b+','+c+')');
-    alert("嗨！(´・ω・`)");
-});
-*/
 //隨機顏色系統
 stackR=255,stackG=255,stackB=255;
 $(document).ready(function(){
