@@ -4,10 +4,13 @@
     list-style: none;
     scroll-behavior: smooth;
     /*transition: left .1s, right .1s; */
+
 }
 body{
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     overflow-scrolling: touch;
 }
 div {
