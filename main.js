@@ -15,6 +15,7 @@ var sticky = hder.offsetHeight - 50;
 var scrollState=0; //
 var deviceHeight=window.innerHeight;
 
+
 function myFunction() {
     deviceHeight=window.innerHeight;
     var nowvYset=window.scrollY; /*螢幕頂端位置*/
@@ -34,7 +35,6 @@ function myFunction() {
         $('.GoTop').css("right","-100px");
     }
     
-    //console.log(nowvYBottomset,sect2Yset)
     if(nowvYBottomset<=sect1Yset){ //[1]完全沒碰到sction2區塊 -關於我
         if(scrollState!=1){ //解決重複效能低問題
             scrollState=1;
@@ -43,8 +43,8 @@ function myFunction() {
             $('.sect2_content').css('bottom','initial');
             $('.sect2_content').css('top','0px');
             $('.sect2_sentence').css('transform','scale(0)');
-            $('.sect2_title p:nth-child(1)').css('left','-100%')
-            $('.sect2_title p:nth-child(2)').css('right','-100%')
+            $('.sect2_title p:nth-child(1)').css('transform','translateX(0%)');
+            $('.sect2_title p:nth-child(2)').css('transform','translateX(0%)');
             $('.sect1_img').css('-webkit-filter','brightness(1)');
         }
     }else if(nowvYBottomset>sect1Yset && nowvYset<=sect1Yset-53){
@@ -59,16 +59,17 @@ function myFunction() {
         var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100);
         tempOK=(temp/-100*0.8+0.2);
         $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
-        $('.sect2_title p:nth-child(1)').css('left',temp+"%")
-        $('.sect2_title p:nth-child(2)').css('right',temp+"%")
+        console.log(temp);
+        $('.sect2_title p:nth-child(1)').css('transform','translateX('+temp+'%)');
+        $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)")
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
         if(scrollState!=3){ //解決重複效能低問題
             scrollState=3;
             $('.sect2_content').css('position','fixed');
             $('.sect2_content').css('bottom','initial');
             $('.sect2_content').css('top','53px');
-            $('.sect2_title p:nth-child(1)').css('left','0%');
-            $('.sect2_title p:nth-child(2)').css('right','0%');
+            $('.sect2_title p:nth-child(1)').css('transform','translateX(0%)');
+            $('.sect2_title p:nth-child(2)').css('transform','translateX(0%)');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
         $('.sect2_sentence').css('transform','scale('+(Math.min(1,(nowvYset+53-sect1Yset)/((sect2Yset-sect1Yset)/2))).toFixed(2)+')');
