@@ -14,9 +14,9 @@ var hder = document.getElementById("hder");
 var sticky = hder.offsetHeight - 50;
 var scrollState=0; //
 var deviceHeight=window.innerHeight;
-
-
+var temp
 function myFunction() {
+    TrunScorll=false;
     deviceHeight=window.innerHeight;
     var nowvYset=window.scrollY; /*螢幕頂端位置*/
     var nowvYBottomset=nowvYset+deviceHeight /*螢幕底端位置*/
@@ -43,8 +43,8 @@ function myFunction() {
             $('.sect2_content').css('bottom','initial');
             $('.sect2_content').css('top','0px');
             $('.sect2_sentence').css('transform','scale(0)');
-            $('.sect2_title p:nth-child(1)').css('transform','translateX(0%)');
-            $('.sect2_title p:nth-child(2)').css('transform','translateX(0%)');
+            $('.sect2_title p:nth-child(1)').css('transform','translateX(-100%)');
+            $('.sect2_title p:nth-child(2)').css('transform','translateX(100%)');
             $('.sect1_img').css('-webkit-filter','brightness(1)');
         }
     }else if(nowvYBottomset>sect1Yset && nowvYset<=sect1Yset-53){
@@ -56,10 +56,9 @@ function myFunction() {
             $('.sect2_sentence').css('transform','scale(0)');
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
-        var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100);
-        /*
+        temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100);
         tempOK=(temp/-100*0.8+0.2);
-        $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');*/
+        $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
         $('.sect2_title p:nth-child(1)').css('transform','translateX('+temp+'%)');
         $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)")
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
