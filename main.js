@@ -57,9 +57,9 @@ function myFunction() {
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
         var temp=Math.round (-100+Math.min(1,(nowvYBottomset-sect1Yset+53)/deviceHeight)*100);
+        /*
         tempOK=(temp/-100*0.8+0.2);
-        $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
-        console.log(temp);
+        $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');*/
         $('.sect2_title p:nth-child(1)').css('transform','translateX('+temp+'%)');
         $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)")
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
