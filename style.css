@@ -263,15 +263,22 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     transform: translate(-50%, 0%);
     opacity: 95%;
 }
+@keyframes rgbCycle {
+    0% { box-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1),0 0 55px rgba(255, 0, 0, 1); }
+    33% { box-shadow: 0 0 10px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 255, 0, 1), 0 0 20px rgba(0, 255, 0, 1),0 0 55px rgba(0, 255, 0, 1); }
+    67% { box-shadow: 0 0 10px rgba(0, 0, 255, 1), 0 0 10px rgba(0, 0, 255, 1), 0 0 20px rgba(0, 0, 255, 1),0 0 55px rgba(0, 0, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1),0 0 55px rgba(255, 0, 0, 1); }
+  }
+
 .Welcome img{
     margin-top: 20vh;
     border-radius:10px;
     display: block;
     width: 100%;
     border: 3px solid rgb(0, 0, 0);
-    box-shadow: 0 0 20px rgb(255, 0, 0);
     cursor: help;
     opacity: 45%;
+    animation: rgbCycle 5s linear infinite;
 }
 .Welcome_btn{   
     background-color: #ffffff8f;
@@ -458,7 +465,17 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
 .sect2_title p:nth-child(2){
     right: -100%;
 }
-
+@keyframes borderbreathing{
+    0%{
+        box-shadow:0 0 10px rgb(250, 233, 186);
+    }
+    50%{
+        box-shadow:0 0 40px rgb(250, 233, 186);
+    }
+    100%{
+        box-shadow:0 0 10px rgb(250, 233, 186);
+    }
+}
 .sect2_sentence{
     background-color: rgba(251, 232, 149, 0.144)  ;
     border-radius: 25px;
@@ -470,10 +487,9 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     
     box-shadow: 0 0 10px rgb(250, 233, 186);
     font-size: min(50px,3vh,5vw); /*20px 3vh*/
-    /*transform: scale(0);*/
-    /* transition: transform linear .05s,box-shadow linear .5s; */
-    /* transition: box-shadow linear .5s; */
-    transition: transform linear ,box-shadow linear ;
+    transform: scale(0);
+    /* transition: transform linear .2s; */
+    animation: borderbreathing 4s linear infinite
 }
 .sect2_sentence a{
     color:#00fff7;
