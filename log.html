@@ -1,41 +1,50 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW" >
+<html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/logo.ico" type="image/x-icon"/>
+    <link rel="icon" href="media/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="source/bootstrap.min.css">
+    <linK rel="stylesheet" href="source/reset.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="style.css">
-    <linK rel="stylesheet" href="reset.css">
-    <title>LZK Website</title>
+    <link rel="stylesheet" href="source/aos.css">
+    <title>LZK_關於我</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="source/aos.js"></script>
+    <script src="source/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!--導覽列-->
     <div id="hder">
-    <div class="header">
-        <input type="checkbox" id="menu_control" class="menu_control">
-        <div class="logo">
+        <div class="header">
+            <input type="checkbox" id="menu_control" class="menu_control">
+            <div class="logo">
                 <a href="index.html"><img src="media/computer-life.png" height="45px" alt="Logo"></a>
-                <a href="index.html"><p>Liao-Zike</p></a>
+                <a href="index.html">
+                    <p>Liao-Zike</p>
+                </a>
+            </div>
+            <label for="menu_control" class="menu_btn">
+                <div class="menu_btn_burger"></div>
+            </label>
+            <div class="menu coolbar">
+                <nav>
+                    <a href="index.html">首頁</a>
+                    <a href="./aboutme.html" class="aboutme">關於我</a>
+                    <a href="./mycertificate.html">證照與競賽</a>
+                    <a href="https://liao-zike.github.io/index.html">小遊戲</a>
+                    <a href="log.html" style="background-color: rgb(255, 157, 0);">網站維護</a>
+                    <a href="index.html">筆記</a>
+                    <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
+                </nav>
+            </div>
         </div>
-        <label for="menu_control" class="menu_btn">
-            <div class="menu_btn_burger"></div>
-        </label>
-        <div class="menu" >
-            <nav>
-                <a href="index.html">首頁</a>
-                <a href="./aboutme.html" class="aboutme">關於我</a>
-                <a href="index.html">證照</a>
-                <a href="https://liao-zike.github.io/index.html">小遊戲</a>
-                <a href="">網站維護</a>
-                <a href="index.html">筆記</a>
-                <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
-            <nav>
-        </div>
-    </div>
     </div>
     <!--首頁-->
     <div class="log_content1">
@@ -49,6 +58,15 @@
             <p>version1.3 2023年7月6日 - 1.修改主頁背景畫面 2.修改美化關於我內容 3.新增滾動頁面之動畫 4.新增一鍵回最上方按鈕</p>
             <br>
             <p>version1.4 2023年7月7日 - 1.新增背景變色功能 2.修改關於我內容 3.優化滾動時卡頓的問題</p>
+            <br>
+            <p>version1.4.1 2023年7月9日 - 1.重新優化滾動時卡頓的問題</p>
+            <br>
+            <p>version1.5 2023年7月11日 - 1.新增證照內容</p>
+            <br>
+            <br>
+            <br>
+
+            <h3 style="color:red">1.待處理：解決手機版與電腦版視窗高度變更跑版問題</h3>
         </div>
     </div>
     <div class="footer"></div>
@@ -64,6 +82,5 @@
         }
     </style>
     <script src="source/jquery-3.6.3.min.js"></script>
-    <script src="source/ocomotive-scroll.min.js"></script>
 </body>
 </html>

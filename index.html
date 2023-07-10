@@ -1,119 +1,247 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW" >
+<html lang="zh-Hant-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="media/logo.ico" type="image/x-icon"/>
+    <link rel="icon" href="media/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="source/bootstrap.min.css">
+    <linK rel="stylesheet" href="source/reset.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="style.css">
-    <linK rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="source/aos.css">
     <title>Website 個人網頁</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="source/aos.js"></script>
+    <script src="source/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!--導覽列-->
     <div id="hder">
-    <div class="header">
-        <input type="checkbox" id="menu_control" class="menu_control">
-        <div class="logo">
+        <div class="header">
+            <input type="checkbox" id="menu_control" class="menu_control">
+            <div class="logo">
                 <a href="index.html"><img src="media/computer-life.png" height="45px" alt="Logo"></a>
-                <a href="index.html"><p>Liao-Zike</p></a>
+                <a href="index.html">
+                    <p>Liao-Zike</p>
+                </a>
+            </div>
+            <label for="menu_control" class="menu_btn">
+                <div class="menu_btn_burger"></div>
+            </label>
+            <div class="menu coolbar">
+                <nav>
+                    <a href="index.html" style="background-color: rgb(255, 157, 0);">首頁</a>
+                    <a href="./aboutme.html" class="aboutme">關於我</a>
+                    <a href="./mycertificate.html">證照與競賽</a>
+                    <a href="https://liao-zike.github.io/index.html">小遊戲</a>
+                    <a href="log.html">網站維護</a>
+                    <a href="index.html">筆記</a>
+                    <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
+                </nav>
+            </div>
         </div>
-        <label for="menu_control" class="menu_btn">
-            <div class="menu_btn_burger"></div>
-        </label>
-        <div class="menu" >
-            <nav>
-                <a href="index.html">首頁</a>
-                <a href="./aboutme.html" class="aboutme">關於我</a>
-                <a href="index.html">證照</a>
-                <a href="https://liao-zike.github.io/index.html">小遊戲</a>
-                <a href="log.html">網站維護</a>
-                <a href="index.html">筆記</a>
-                <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
-            <nav>
-        </div>
-    </div>
     </div>
     <style>
     </style>
     <a name="top"></a>
     <!--首頁-->
     <div class="content">
-    <div class="section1">
-        <div class="myimg">
-            <img class="sect1_img" alt="">
+        <div class="section1">
+            <div class="myimg">
+                <img class="sect1_img" alt="">
+            </div>
+            <div class="Welcome">
+                <img src="media/Hello.gif" alt="" style="-webkit-user-drag: none;">
+                <!-- <input class="Welcome_btn" type="button" value="Hi (touch me!)">。 -->
+                <div class="Welcome_btn">
+                    <div class="Welcome_btn_div">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <p>Hi (touch me!)</p>
+                    </div>
+                </div>
+                <div class="sect1_more">↓ 往下查看更多 ↓</div>
+            </div>
+
+            <a name="loc_sect2"></a>
+            <div class="sect1_special">
+                <div class="sect1_special_R">R</div>
+                <div class="sect1_special_G">G</div>
+                <div class="sect1_special_B">B</div>
+            </div>
+            <style>
+                .sect1_special {
+                    width: 80%;
+                    height: 50%;
+                    background-color: antiquewhite;
+                    position: absolute;
+                    top: 30%;
+                    left: -150%;
+                    transform: translate(-50%, 0%);
+                    border-radius: 5px;
+                    transition: .6s;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    font-size: 50px;
+                    font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+
+                }
+            </style>
         </div>
-        <div class="Welcome">
-            <img src="media/Hello.gif" alt="" style="-webkit-user-drag: none;">
-            <!-- <input class="Welcome_btn" type="button" value="Hi (touch me!)">。 -->
-            <div class="Welcome_btn">
-                <div class="Welcome_btn_div">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <p>Hi (touch me!)</p>
+        <div class="section2 coolbar">
+            <div class="sect2_content">
+                <div class="sect2_title">
+                    <p>關於我</p>
+                    <p>about me</p>
+                </div>
+                <div class="sect2_sentence">
+                    <p>你好！歡迎來到我的網站！我是Zi-Ke Liao，一位就讀於資訊工程學系的學生。
+                        在這裡，你可以瀏覽關於我個人介紹的內容，從五專剛開始接觸資訊領域開始，為什麼會想接觸資訊工程，五專學習路程上遇到的事情，還有一些我曾經取得的有趣的事蹟..?
+                        以及專長項目，包括C/C++語言、Python等語言~同時，你也可以看到我過去完成的報告和作品。<br><br>這個網站我會盡可能實現響應式設計（RWD），提供使用者完整體驗環境，不過對於一些極特殊的3C裝置，還是可能會出現跑版問題，請見諒。<br><br>
+                        link: <a href="aboutme.html">
+                            <點我查看我的自介~ Touch me please.>
+                        </a>
+                        <br><br>
                 </div>
             </div>
-            <div class="sect1_more">↓ 往下查看更多 ↓</div>
-        </div>
-        
-        <a name="loc_sect2"></a>
-        <div class="sect1_special">
-            <div class="sect1_special_R">R</div>
-            <div class="sect1_special_G">G</div>
-            <div class="sect1_special_B">B</div>
         </div>
         <style>
-            .sect1_special{
-                width: 80%;
-                height: 50%;
-                background-color: antiquewhite;
-                position: absolute;
-                top:30%;
-                left:-150%;
-                transform: translate(-50%, 0%);
-                border-radius: 5px;
-                transition: .6s;
-                display: flex;
-                flex-direction: row;
-                justify-content:space-around;
-                font-size: 50px;
-                font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
-
-            }
         </style>
-    </div>
-    <div class="section2 coolbar">
-        <div class="sect2_content">
-            <div class="sect2_title">
-                <p>關於我</p>
-                <p>about me</p>
+        <div class="section3">
+            <div class="section3_title">
+                <p data-aos="fade-right" data-aos-easing="linear" data-aos-offset="0" data-aos-delay="100"
+                    data-aos-duration="300">證照
+                </p>
             </div>
-            <div class="sect2_sentence">
-                <p>你好！歡迎來到我的網站！我是Zi-Ke Liao，一位就讀於資訊工程學系的學生。
-                    在這裡，你可以瀏覽關於我個人介紹的內容，從五專剛開始接觸資訊領域開始，為什麼會想接觸資訊工程，五專學習路程上遇到的事情，還有一些我曾經取得的有趣的事蹟..? 以及專長項目，包括C/C++語言、Python等語言~同時，你也可以看到我過去完成的報告和作品。<br><br>這個網站我會盡可能實現響應式設計（RWD），提供使用者完整體驗環境，不過對於一些極特殊的3C裝置，還是可能會出現跑版問題，請見諒。<br><br> link: <a href="aboutme.html"><點我查看我的自介~ Touch me please.></a>
-                <br><br>
+            <div class="section3_content container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"> <!-- 證照1 -->
+                        <div class="card" style="width: 22rem;" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="150"
+                        data-aos-duration="300">
+                            <img src="media/sect3_1_A_ComputerSoftwareDesign.jpg" class="card-img-top" alt="電腦軟體設計照片">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>電腦軟體設計-丙級</b></h3>
+                                <h6 class="card-text">具備基本電腦知識並能使用電腦設計簡易程式，協助乙級電腦軟體設計人員完成程式設計和程式測試等能力。</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">● 勞動部勞動力發展署技能檢定中心發製</li>
+                                <li class="list-group-item">● 技術士證總編號：
+                                    119-0033664</li>
+                                <li class="list-group-item">● 2021/11/30 生效</li>
+                            </ul>
+                            <div class="card-body d-flex justify-content-center">
+                                <a href="./mycertificate.html" class="card-link">查看詳細內容</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"> <!-- 證照2 -->
+                        <div class="card" style="width: 22rem;" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="150"
+                        data-aos-duration="300">
+                            <img src="media/sect3_2_A_ComputerHardwareDecoration.jpg" class="card-img-top" alt="電腦硬體裝修照片">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>電腦硬體裝修-丙級</b></h3>
+                                <h6 class="card-text">具備從事微電腦及週邊設備操作、組合、測試及簡易維修，並能安裝完成微電腦系統之能力。</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">● 勞動部勞動力發展署技能檢定中心發製</li>
+                                <li class="list-group-item">● 技術士證總編號：
+                                120-0287398</li>
+                                <li class="list-group-item">● 2022/03/25 生效</li>
+                            </ul>
+                            <div class="card-body d-flex justify-content-center">
+                                <a href="./mycertificate.html" class="card-link">查看詳細內容</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"> <!-- 證照3 -->
+                        <div class="card" style="width: 22rem;" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="150"
+                        data-aos-duration="300">
+                            <img src="media/sect3_3_A_Digital Logic.jpg" class="card-img-top" alt="數位邏輯設計">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>數位邏輯設計-實用級</b></h3>
+                                <h6 class="card-text">具備組合邏輯、循序設計能力、CPLD程式撰寫之能力和訊號量測能力，且具備規劃架構發展流程的能力</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">● 台灣嵌入式暨單晶片系統發展協會發製</li>
+                                <li class="list-group-item">● 證照編號：TDP230001</li>
+                                <li class="list-group-item">● 2023/01/12發證</li>
+                            </ul>
+                            <div class="card-body d-flex justify-content-center">
+                                <a href="./mycertificate.html" class="card-link">查看詳細內容</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"> <!-- 證照4 -->
+                        <div class="card" style="width: 22rem;" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="150"
+                        data-aos-duration="300">
+                            <img src="media/sect3_4_A_Linux.jpg" class="card-img-top" alt="Linux系統管理">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>Linux系統管理-專業級</b></h3>
+                                <h6 class="card-text">具備Linux系統管理能力<br><br><br></h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">● 電腦技能基金會(TQC)發製</li>
+                                <li class="list-group-item">● 證照編號：122230700000490</li>
+                                <li class="list-group-item">● 2023/06/09取證</li>
+                            </ul>
+                            <div class="card-body d-flex justify-content-center">
+                                <a href="./mycertificate.html" class="card-link">查看詳細內容</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center"> <!-- 證照5 -->
+                        <div class="card" style="width: 22rem;" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="150"
+                        data-aos-duration="300">
+                            <img src="media/sect3_5_A_Python3.jpg" class="card-img-top" alt="Python3程式語言">
+                            <div class="card-body">
+                                <h3 class="card-title"><b>程式語言Python3-單一級</b></h3>
+                                <h6 class="card-text">具備Python3程式設計能力<br><br><br></h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">● 電腦技能基金會(TQC+)發製</li>
+                                <li class="list-group-item">● 證照編號：222230700000240</li>
+                                <li class="list-group-item">● 2023/06/09取證</li>
+                            </ul>
+                            <div class="card-body d-flex justify-content-center">
+                                <a href="./mycertificate.html" class="card-link">查看詳細內容</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>證照...</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>作品與小遊戲</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>五專_專區</p>
-    </div>
-    <div class="aaa"  style="font-size: 10px;height: 500px;background-color: aliceblue;border: saddlebrown solid 5px;">
-        <p>匿名信箱(PHP&資料庫)</p>
-    </div>
-    <div style="font-size: 50px;">
-    </div>
+
+        <div class="section4">
+            <div class="section4_title">
+                <p data-aos="fade-right" data-aos-easing="linear" data-aos-delay="100"
+                    data-aos-duration="300">大學程式能力檢定(CPE)
+                </p>
+            </div>
+            <div class="section4_content container">
+            </div>
+        </div>
+        <div class="aaa"
+            style="font-size: 10px;height: 500px;background-color: aliceblue;outline : saddlebrown solid 5px;">
+            <p>作品與小遊戲</p>
+        </div>
+        <div class="aaa"
+            style="font-size: 10px;height: 500px;background-color: aliceblue;outline : saddlebrown solid 5px;">
+            <p>五專_專區</p>
+        </div>
+        <div class="aaa"
+            style="font-size: 10px;height: 500px;background-color: aliceblue;outline : saddlebrown solid 5px;">
+            <p>匿名信箱(PHP&資料庫)</p>
+        </div>
+        <div style="font-size: 50px;">
+        </div>
     </div>
     <div class="footer"></div>
 
@@ -122,7 +250,10 @@
         <p><b>↑</b></p>
     </a>
     <script src="source/jquery-3.6.3.min.js"></script>
-    <script src="source/ocomotive-scroll.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
