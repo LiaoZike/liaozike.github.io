@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="source/bootstrap.min.css">
     <linK rel="stylesheet" href="source/reset.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="source/aos.css">
     <title>LZK_網站維護紀錄</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,36 +48,78 @@
     <!--首頁-->
     <div class="log_content1">
         <div class="log_content1_text" >
-            <p>version1.0 2022年        -網站正式上線</p>
-            <br>
-            <p>version1.1 2022年6月     - 1.新增歡迎頁面(包括點擊事件)</p>
-            <br>
-            <p>version1.2 2023年2月25日 - 1.更新(美化)歡迎頁面 2.新增點擊touch me隨機變換主題顏色 3.新增關於我內容</p>
-            <br>
-            <p>version1.3 2023年7月6日 - 1.修改主頁背景畫面 2.修改美化關於我內容 3.新增滾動頁面之動畫 4.新增一鍵回最上方按鈕</p>
-            <br>
-            <p>version1.4 2023年7月7日 - 1.新增背景變色功能 2.修改關於我內容 3.優化滾動時卡頓的問題</p>
-            <br>
-            <p>version1.4.1 2023年7月9日 - 1.重新優化滾動時卡頓的問題</p>
-            <br>
-            <p>version1.5 2023年7月11日 - 1.新增證照內容</p>
-            <br>
-            <br>
-            <br>
+            <table class="table table-striped">
+                <thead class="">
+                  <tr>
+                    <th scope="col">版本</th>
+                    <th scope="col">日期</th>
+                    <th scope="col">內容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">version1.6</th>
+                    <td>2023年7月12日</td>
+                    <td>1.新增大學程式能力檢定(CPE)內容</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.5</th>
+                    <td>2023年7月11日</td>
+                    <td>1.新增證照內容</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.4.1</th>
+                    <td>2023年7月9日</td>
+                    <td>1.優化滾動時卡頓的問題</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.4</th>
+                    <td>2023年7月7日</td>
+                    <td>1.修改背景圖片 2.美化關於我內容 3.新增滾動頁面動畫 4.新增一鍵回最上方按鈕</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.3</th>
+                    <td>2023年7月6日</td>
+                    <td>1.新增往下滑動背景變色功能 2.修改關於我內容 3.優化滾動時卡頓的問題</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.2</th>
+                    <td>2023年2月25日</td>
+                    <td>1.更新與美化頁面 2.新增點擊touch me隨機變換主題顏色功能 3.新增關於我內容</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.1</th>
+                    <td>2022年6月</td>
+                    <td>1.新增歡迎頁面(包括點擊事件)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">version1.0</th>
+                    <td>2022年</td>
+                    <td>網站正式上線</td>
+                  </tr>
+                </tbody>
+            </table>
 
-            <h3 style="color:red">1.待處理：解決手機版與電腦版視窗高度變更跑版問題 2.手機板的 證照-查看詳細內容邊框顯示異常</h3>
+            <h3 style="color:red">問題回報尚未修復：</h3>
+            <h3 style="color:red">1.手機版與電腦版視窗高度變更跑版問題</h3>
+            <h3 style="color:red">2.手機板的 證照-查看詳細內容邊框顯示異常</h3>
         </div>
     </div>
     <div class="footer"></div>
 
     <style>
         .log_content1{
+            position: relative;
             width: 100%;
             height: 100vh;
             background-color:beige;
         }
         .log_content1_text{
             padding-top: 55px;
+            color:black;
+        }
+        table td{
+            color:black !important;
         }
     </style>
     <script src="source/jquery-3.6.3.min.js"></script>
