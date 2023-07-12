@@ -63,7 +63,7 @@
     margin: 40px auto 10px auto;
     width: 70%;
     height: 10%;
-    border-radius:2px;
+    border-radius:2px !important;
     position: relative;
 }
 .Welcome_btn_div{
@@ -251,7 +251,7 @@
 }
 .sect2_sentence{
     background-color: rgba(251, 232, 149, 0.144)  ;
-    border-radius: 25px;
+    border-radius: 25px !important;
     color:rgb(255, 255, 255);
     padding: 2%;
     margin: 5px;
@@ -313,7 +313,7 @@
     text-align: center;
     padding: 10px 0px;
     font-size: 20px;
-    border-radius: 30px;
+    border-radius: 30px !important;
     transition: all .35s;
     outline: solid 2px black;
 }
