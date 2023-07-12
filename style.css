@@ -1,4 +1,7 @@
 /*section 和 welcome*/
+*{
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif !important;
+}
 .section1 {
     padding-top: 0px;
     /*display: flex;*/
@@ -81,7 +84,7 @@
     justify-content: center;
     text-align: center  ;
     font-size: 3.5vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     color:#111;
 }
 .Welcome_btn :hover{ 
@@ -204,7 +207,6 @@
     opacity: 100%;
     height: calc(250vh - 53px);
     width: 100%;
-    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
     position: relative;
     overflow:hidden;
     overflow-y:auto;
@@ -294,9 +296,10 @@
 .section3_content{
     padding-top: 50px;
 }
-.card{
+.section3_content .card{
     box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
     outline: solid 2px rgb(37, 37, 37) !important;
+    isolation: isolate;  /* 新增 */
     border-radius: 25px !important;
     margin-bottom: 50px;
     overflow: hidden;
@@ -313,6 +316,7 @@
     text-align: center;
     padding: 10px 0px;
     font-size: 20px;
+    isolation: isolate; /* 新增 */
     border-radius: 30px !important;
     transition: all .35s;
     outline: solid 2px black;
@@ -323,6 +327,7 @@
 }
 
 .section4{
+    margin-top: 50px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -334,7 +339,34 @@
     line-height: 30vh;
     text-align: center;
     font-size: 10vmin;
+    overflow: hidden;
 }
+.section4_content{
+    margin-top: 20px;
+    overflow-x: auto;
+}
+.section4_content table th{
+    color:white;
+}
+.section4_content table td{
+    color:white;
+}
+.section5{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    background-color: red;
+}
+.section5_title{
+    background-color: rgb(251, 247, 234);
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+
 /**********   平板規格以上 (桌機)   **********/
 @media screen and (min-width:880px) { 
     
