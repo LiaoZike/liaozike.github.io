@@ -49,6 +49,7 @@
     <div class="log_content1">
         <div class="log_content1_text" >
             <table class="table table-striped table-border">
+              
                 <thead class="">
                   <tr>
                     <th scope="col">版本</th>
@@ -58,43 +59,48 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">version1.6.1</th>
-                    <td>2023年7月19日</td>
+                    <th scope="row">&nbsp;&nbsp;>version1.6.2</th>
+                    <td>2023年08月01日</td>
+                    <td>1.修復iPhone裝置顯示邊框異常</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">&nbsp;&nbsp;>version1.6.1</th>
+                    <td>2023年07月19日	</td>
                     <td>1.優化大學程式能力檢定顯示 2.重新排版網站記錄</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.6</th>
-                    <td>2023年7月12日</td>
+                    <td>2023年07月12日</td>
                     <td>1.新增大學程式能力檢定(CPE)內容</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.5</th>
-                    <td>2023年7月11日</td>
+                    <td>2023年07月11日</td>
                     <td>1.新增證照內容</td>
                   </tr>
                   <tr>
-                    <th scope="row">version1.4.1</th>
-                    <td>2023年7月9日</td>
+                    <th scope="row">&nbsp;&nbsp;>version1.4.1</th>
+                    <td>2023年07月09日</td>
                     <td>1.優化滾動時卡頓的問題</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.4</th>
-                    <td>2023年7月7日</td>
+                    <td>2023年07月07日</td>
                     <td>1.修改背景圖片 2.美化關於我內容 3.新增滾動頁面動畫 4.新增一鍵回最上方按鈕</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.3</th>
-                    <td>2023年7月6日</td>
+                    <td>2023年07月06日</td>
                     <td>1.新增往下滑動背景變色功能 2.修改關於我內容 3.優化滾動時卡頓的問題</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.2</th>
-                    <td>2023年2月25日</td>
+                    <td>2023年02月25日</td>
                     <td>1.更新與美化頁面 2.新增點擊touch me隨機變換主題顏色功能 3.新增關於我內容</td>
                   </tr>
                   <tr>
                     <th scope="row">version1.1</th>
-                    <td>2022年6月</td>
+                    <td>2022年06月</td>
                     <td>1.新增歡迎頁面(包括點擊事件)</td>
                   </tr>
                   <tr>
@@ -104,20 +110,60 @@
                   </tr>
                 </tbody>
             </table>
-
-            <h3 style="color:red">問題回報尚未修復：</h3>
-            <h3 style="color:red">1.手機版與電腦版視窗高度變更跑版問題</h3>
-            <h3 style="color:red">2.手機板的 證照-查看詳細內容邊框顯示異常</h3>
         </div>
     </div>
+    <div class="log_content2">
+
+      <h3 style="color:red" class="text-center">問題回報紀錄</h3>
+      <div class="log_content2_text" >
+          <table class="table table-border text-center">
+              <thead class="">
+                <tr>
+                  <th scope="col">編號ＩＤ</th>
+                  <th scope="col">問題內容</th>
+                  <th scope="col">問題接收時間</th>
+                  <th scope="col">處理階段時間</th>
+                  <th scope="col">處理狀態</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color:rgb(255, 105, 105);">
+                  <th scope="row">1</th>
+                  <td>手機版與電腦版視窗高度變更會出現跑版問題</td>
+                  <td>2023年07月16日</td>
+                  <td>2023年08月01日</td>
+                  <td>尚未修復</td>
+                </tr>
+                <tr style="background-color:#79ff7bdf;">
+                  <th scope="row">2</th>
+                  <td>iPhone裝置顯示“證照卡片”邊框與”查看詳細內容按鈕” 邊框顯示異常</td>
+                  <td>2023年07月19日</td>
+                  <td>2023年08月01日</td>
+                  <td>已解決</td>
+                </tr>
+
+                <tr style="background-color:rgba(255, 255, 255, 0);">
+                  <th scope="row">-</th>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+
     <div class="footer"></div>
 
     <style>
+      body{
+        background-color:rgb(248, 248, 239);
+        min-height: 100vh;
+      }
         .log_content1{
             position: relative;
             width: 100%;
-            min-height: 100vh;
-            background-color:beige;
         }
         .log_content1_text{
             padding-top: 55px;
@@ -125,6 +171,24 @@
         }
         table td{
             color:black !important;
+        }
+
+        .log_content2{
+          margin-top: 50px;
+        }
+
+        .log_content2 table th{
+          border: 1px solid black;
+        }
+        .log_content2 table td{
+          border: 1px solid black;
+        }
+        .log_content2 table tr{
+          border: 2px solid black;
+          margin-bottom: 10px;
+        }   
+        #hder{
+          background-color: rgb(254, 247, 143);
         }
     </style>
     <script src="source/jquery-3.6.3.min.js"></script>
