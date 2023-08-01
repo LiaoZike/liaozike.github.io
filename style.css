@@ -67,6 +67,7 @@
     width: 70%;
     height: 10%;
     border-radius:2px !important;
+    -webkit-border-radius:2px !important;
     position: relative;
 }
 .Welcome_btn_div{
@@ -301,6 +302,7 @@
     outline: solid 2px rgb(37, 37, 37) !important;
     isolation: isolate;  /* 新增 */
     border-radius: 25px !important;
+    -webkit-border-radius:25px !important;
     margin-bottom: 50px;
     overflow: hidden;
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif !important;
@@ -318,6 +320,7 @@
     font-size: 20px;
     isolation: isolate; /* 新增 */
     border-radius: 30px !important;
+    -webkit-border-radius:30px !important;
     transition: all .35s;
     outline: solid 2px black;
 }
@@ -328,9 +331,9 @@
 
 .section4{
     margin-top: 50px;
-    margin-bottom: 100px;
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 .section4_title {
     background-color: rgb(251, 247, 234);
@@ -343,16 +346,7 @@
 }
 .section4_content{
     margin-top: 20px;
-    overflow:auto;
-    
-}
-.section4_content table{
-    width: 1050px !important;
-    
-    position:relative;
-    top: 0;
-    right: 0;
-    margin: auto;
+    overflow-x: auto;
 }
 .section4_content table th{
     color:white;
