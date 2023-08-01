@@ -2,6 +2,9 @@
 *{
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif !important;
 }
+body{
+    -webkit-overflow-scrolling: touch;
+}
 .section1 {
     padding-top: 0px;
     /*display: flex;*/
@@ -298,8 +301,10 @@
     padding-top: 50px;
 }
 .section3_content .card{
-    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255);
-    outline: solid 2px rgb(37, 37, 37) !important;
+    box-shadow: 
+        0px  0px  0  2px  black,
+        0px 0px 5px 2px rgb(255, 255, 255);
+    /* outline: solid 2px rgb(37, 37, 37) !important; 有問題*/
     isolation: isolate;  /* 新增 */
     border-radius: 25px !important;
     -webkit-border-radius:25px !important;
@@ -322,18 +327,18 @@
     border-radius: 30px !important;
     -webkit-border-radius:30px !important;
     transition: all .35s;
-    outline: solid 2px black;
+    /* outline: solid 2px black; 有問題的*/
+    box-shadow:0  0  0  2px  black;
 }
 .section3_content a:hover{
     background-color: rgb(229, 229, 229);
     color:black;
 }
-
 .section4{
     margin-top: 50px;
+    margin-bottom: 100px;
     position: relative;
     width: 100%;
-    overflow: hidden;
 }
 .section4_title {
     background-color: rgb(251, 247, 234);
@@ -346,7 +351,16 @@
 }
 .section4_content{
     margin-top: 20px;
-    overflow-x: auto;
+    overflow:auto;
+    
+}
+.section4_content table{
+    width: 1050px !important;
+    
+    position:relative;
+    top: 0;
+    right: 0;
+    margin: auto;
 }
 .section4_content table th{
     color:white;
@@ -393,12 +407,9 @@
         text-shadow: 0px 0px 15px rgb(255, 153, 0);
     }
 }
-
-
 /**********   PC規格以上   **********/
 @media screen and (min-width:1250px){
     .Welcome_btn p{
         font-size: 2.5vw;
     }
 }
-
