@@ -63,7 +63,11 @@ function myFunction() {
         tempOK=(temp/-100*0.8+0.2);
         $('.sect1_img').css('-webkit-filter','brightness('+tempOK+')');
         $('.sect2_title p:nth-child(1)').css('transform','translateX('+temp+'%)');
-        $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)")
+        $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)");
+        // console.log("1:"+temp);
+        // console.log("2:"+tempOK);
+        $('.sect1_img').css('transform','scale('+(2-tempOK).toFixed(2)+')');
+
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
         if(scrollState!=3){ //解決重複效能低問題
             scrollState=3;
@@ -75,6 +79,7 @@ function myFunction() {
             $('.sect1_img').css('-webkit-filter','brightness(0.2)');
         }
         $('.sect2_sentence').css('transform','scale('+(Math.min(1,(nowvYset+53-sect1Yset)/((sect2Yset-sect1Yset)/2))).toFixed(2)+')');
+        
     }else if(nowvYBottomset>sect2Yset){ //[4]
         if(scrollState!=4){ //解決重複效能低問題
             scrollState=4;
@@ -109,3 +114,11 @@ $(document).ready(function(){
         $(this).blur(); //移除焦點
     })
 });
+
+$(document).ready(function(){
+    $('.menu a').click(function(){
+        var obj = document.getElementById("menu_control");
+        var value=obj.checked;
+        if(value==true) obj.checked=false;
+    })
+})
