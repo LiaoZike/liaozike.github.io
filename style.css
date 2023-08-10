@@ -33,6 +33,7 @@ body{
     width: 100%;
     height: 100%;
 }
+
 .Welcome{
     position: absolute;
     height: 100%;
@@ -152,7 +153,6 @@ body{
     height: 100%;
     background: linear-gradient(0deg, transparent, #ff0);
     animation: Welcome_btn-anim4 1s linear infinite;
-    ;
     animation-delay: 1.5s
    /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/    
 }
@@ -189,9 +189,7 @@ body{
     50%,100% {
         bottom: 100%;
     }
-  }
-
-
+}
 .sect1_more{
     width: 100%;
     height: auto;
@@ -203,7 +201,23 @@ body{
     text-shadow: 0 0 5px rgb(144, 144, 144);
     position: absolute;
     bottom: 5%;
-    color:#ffffff
+    color:#ffffff;
+    animation: sect1_more-anim 2s linear infinite;
+}
+
+@keyframes sect1_more-anim {
+    0% {
+        transform: translateY(0px);
+    }
+    33%{
+        transform: translateY(-5vh);
+    }
+    66%{
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 .section2{
     /* background-color: #222;
@@ -220,7 +234,6 @@ body{
     height: calc(100vh - 53px); 
     width: 100%;
 } /*重要*/
-
 .sect2_title{
     width: 100%;
     text-align: center;
@@ -278,13 +291,17 @@ body{
     background-color: rgb(250, 151, 89);
     color:white;
 }
+
+
+
 .section3{
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-bottom: 150px;
 }
-.section3_title {
-    background-color: rgb(251, 247, 234);
+.section3_title{
+    background-color: rgb(255, 201, 201);
     height: 30vh;
     width: 100%;
     line-height: 30vh;
@@ -297,13 +314,30 @@ body{
     width: 100%;
     font-size: 1em;
 }
+.section3_description{
+    font-size: 2em;
+    font-size: min(50px,3vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,3vh,5vw) + 10px);
+    padding: 20px 60px;
+    color:white;
+    /* box-shadow: 5px 2px 3px 3px rgb(255, 255, 170); */
+    box-shadow: 5px 2px 3px 3px rgb(255, 201, 201);
+}
+@media screen and (max-width:400px) { 
+    .section3_description{
+        padding: 20px 5px;
+    }
+}
 .section3_content{
     padding-top: 50px;
 }
 .section3_content .card{
-    box-shadow: 
+    /* box-shadow: 
         0px  0px  0  2px  black,
-        0px 0px 5px 2px rgb(255, 255, 255);
+        0px 0px 5px 2px rgb(255, 255, 255); */
+    box-shadow: 
+    0px  0px  0  2px  black,
+    0px 0px 5px 3px rgb(255, 116, 116);
     /* outline: solid 2px rgb(37, 37, 37) !important; 有問題*/
     isolation: isolate;  /* 新增 */
     border-radius: 25px !important;
@@ -334,14 +368,16 @@ body{
     background-color: rgb(229, 229, 229);
     color:black;
 }
+
+
+
 .section4{
-    margin-top: 50px;
-    margin-bottom: 100px;
     position: relative;
     width: 100%;
+    margin-bottom: 200px;
 }
-.section4_title {
-    background-color: rgb(251, 247, 234);
+.section4_title{
+    background-color: rgb(255, 213, 179);
     height: 30vh;
     width: 100%;
     line-height: 30vh;
@@ -349,13 +385,30 @@ body{
     font-size: 10vmin;
     overflow: hidden;
 }
+.section4_description{
+    font-size: min(50px,2vh,4vw); /*20px 3vh*/
+    
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+    /* box-shadow: 5px 2px 3px 3px rgb(255, 255, 170); */
+    box-shadow: 5px 2px 3px 3px rgb(255, 213, 179);
+}
+
+@media screen and (max-width:400px) { 
+    .section4_description{
+        padding: 20px 5px;
+    }
+}
 .section4_content{
-    margin-top: 20px;
+    margin-top: 50px;
     overflow:auto;
+    font-size: x-large;
     
 }
 .section4_content table{
-    width: 1050px !important;
+    width: 1520px !important;
     
     position:relative;
     top: 0;
@@ -368,14 +421,31 @@ body{
 .section4_content table td{
     color:white;
 }
+
+
+
 .section5{
     margin-top: 50px;
     position: relative;
     width: 100%;
-    background-color: red;
+    margin-bottom: 250px;
+}
+.section5_description{
+    /* font-size: min(50px,2vh,4vw); 20px 3vh */
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+    /* box-shadow: 5px 2px 3px 3px rgb(255, 255, 170); */
+    box-shadow: 5px 2px 3px 3px rgb(255, 245, 170);
+}
+@media screen and (max-width:400px) { 
+    .section5_description{
+        padding: 20px 5px;
+    }
 }
 .section5_title{
-    background-color: rgb(251, 247, 234);
+    background-color: rgb(255, 245, 170);
     height: 30vh;
     width: 100%;
     line-height: 30vh;
@@ -383,7 +453,164 @@ body{
     font-size: 10vmin;
     overflow: hidden;
 }
+.section5_content{
+    margin-top: 50px;
+}
+.section5_content .card{
+    width: 100% !important;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 6px 5px rgb(255, 245, 170);
+}
+.section5_content .card-link{
+    display: block;
+    background-color: rgb(60, 60, 60);
+    text-decoration: none;
+    color:whitesmoke;
+    text-align: center;
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 10px;
+    isolation: isolate; /* 新增 */
+    border-radius: 30px !important;
+    -webkit-border-radius:30px !important;
+    transition: all .35s;
+    /* outline: solid 2px black; 有問題的*/
+    box-shadow:0  0  0  2px  black;
+}
+.section5_content .card-link:hover{
+    user-select: none;
+    background-color: rgb(229, 229, 229);
+    color:black;
+}
+.section5 .carousel-item img{
+    height: 100%;
+    user-select: noen;
+}
+.section5 .carousel-caption{
+    width: 60%;
+    transform: translateX(8%);
+}
 
+
+
+.section6{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.section6_title{
+    background-color: rgb(221, 255, 222);
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+.section6_description{
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+    box-shadow: 5px 2px 3px 3px rgb(221, 255, 222);
+}
+.section6_content{
+    margin-top: 50px;
+}
+
+
+
+.section7{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.section7_title{
+    background-color: rgb(137, 186, 255);
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+.section7_description{
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+    box-shadow: 5px 2px 3px 3px rgb(137, 186, 255);
+}
+.section7_content{
+    margin-top: 50px;
+}
+
+
+
+.section8{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 200px;
+}
+.section8_title{
+    background-color: rgb(219, 181, 255);
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+.section8_description{
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+    box-shadow: 5px 2px 3px 3px rgb(219, 181, 255);
+}
+.section8_content{
+    margin-top: 50px;
+}
+.footer{
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 300px;
+}
+.footer_title{
+    background-color: rgb(157, 135, 135);
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+.section8 a{
+    margin-top: 20  px;
+    display: block;
+    width: 100% !important;
+    text-align: center;
+    font-size: 50px; /*20px 3vh*/
+    line-height: 100px;
+    color:white;
+    box-shadow: 0px 0px 3px 4px rgb(255, 201, 201);
+    background-color: rgb(236, 178, 255);
+    border-radius: 200px;
+    transition: all .5s;
+    text-decoration: none;
+    border:#000 solid 4px;
+}
+
+.section8 a:hover{
+    background-color: aliceblue;
+    color:black;
+}
 /**********   平板規格以上 (桌機)   **********/
 @media screen and (min-width:880px) { 
     
