@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../media/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../source/bootstrap.min.css">
+    <linK rel="stylesheet" href="../source/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../source/jquery-ui.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>LZK_Website</title>
+    <script src="../source/bootstrap.bundle.min.js"></script>
+    <script src="../source/jquery-3.6.3.min.js"></script>
+    <script src="../source/jquery-ui.js"></script>
+</head>
+
+<body>
+    <!--導覽列-->
+    <div id="hder">
+        <div class="header">
+            <input type="checkbox" id="menu_control" class="menu_control">
+            <div class="logo">
+                <a href="../index.html"><img src="../media/mylogo.png" height="45px" alt="Logo"></a>
+                <a href="../index.html">
+                    <p>Liao-Zike</p>
+                </a>
+            </div>
+            <label for="menu_control" class="menu_btn">
+                <div class="menu_btn_burger"></div>
+            </label>
+            <div class="menu coolbar">
+                <nav>
+                    <a href="../index.html"><div class="homeicon" ><span></span><span></span><span></span><span></span><span></span></div>首頁</a>
+                    <a href="../index.html#a_sect2" class="aboutme">關於我</a>
+                    <a href="../index.html#a_sect3">證照與競賽</a>
+                    <a href="../index.html#a_sect6" style="background-color: rgb(255, 157, 0);">作品與小遊戲</a>
+                    <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
+                    <a href="../log.html">網站維護</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            說明區
+            <div style="color:red; font-size: 100px;text-align: center;">此區域內容整理中!</div>
+            </div>
+        </div>
+        <div class="row  myoption">
+            <div class="col-12 col-md-6 col-xl-3">
+                燈光模式
+                <select class="form-select" id="modeselect" aria-label="Default select example" style="margin-top: 5px;cursor: pointer;">
+                    <!-- <option selected value="0">選擇模式</option> -->
+                    <option selected value="1">固定顏色</option>
+                    <option value="2">呼吸燈</option>
+                    <option value="3">RGB循環</option>
+                    <option value="4">RGB呼吸</option>
+                  </select>
+                <div class="choosecolor"> 顏色:<input type="color" id="modecolor" value="#FFFFFF" style="transform: translateY(3px);cursor: pointer;margin-top: 5px;"></div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 turnBlock">
+                播放暫停
+                <div class="ICON_turn">
+                    <input type="checkbox" id="RGB_control" name="RGB_control" checked  style="margin-top: 5px;">
+                    <div class="color"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+                速度滑桿
+                <div class="speed">
+                    <div id="slider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content" style="margin-top: 18px;width: 90%;left:5%;"><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 50%;"></span></div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 clearbtn">
+                清除鍵盤狀態及紀錄
+                <div class="clearicon">
+                    🧹
+                </div>
+                <style>
+                    .clearicon{
+                        margin-top: 10px;
+                        width: auto;
+                        font-size: 35px;
+                        width: 35px;
+                        height: 35px;
+                        position: relative;
+                        left: calc(50% - 17.5px);
+                        filter: brightness(2.5);
+                    }
+                    .myoption .col-12{
+                        user-select: none;
+                    }
+                    .myoption .col-12:nth-child(4):hover{
+                        background-color: rgb(128, 128, 128);
+                        cursor: pointer;
+                    }
+                </style>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col keyboardcol">
+                <div class="keyboard">
+                    <div class="K_row1">
+                        <div class="key_empty" id="key27">ESC</div>
+                        <div class="key_empty" id="key112" style="margin-left: 51px;">F1</div>
+                        <div class="key_empty" id="key113">F2</div>
+                        <div class="key_empty" id="key114">F3</div>
+                        <div class="key_empty" id="key115">F4</div>
+                        <div class="key_empty" id="key116" style="margin-left: 50px;">F5</div>
+                        <div class="key_empty" id="key117">F6</div>
+                        <div class="key_empty" id="key118">F7</div>
+                        <div class="key_empty" id="key119">F8</div>
+                        <div class="key_empty" id="key120" style="margin-left: 50px;">F9</div>
+                        <div class="key_empty" id="key121">F10</div>
+                        <div class="key_empty" id="key122">F11</div>
+                        <div class="key_empty" id="key123">F12</div>
+                        <div class="key_empty" id="key" style="margin-left: 40px;">PrtSc</div>
+                        <div class="key_empty" id="key">Scrlk</div>
+                        <div class="key_empty" id="key">Pause</div>
+                    </div>
+                    <div class="K_row2" style="margin-top: 10px;">
+                        <div class="key_empty" id="key192">`</div>
+                        <div class="key_empty" id="key49">1</div>
+                        <div class="key_empty" id="key50">2</div>
+                        <div class="key_empty" id="key51">3</div>
+                        <div class="key_empty" id="key52">4</div>
+                        <div class="key_empty" id="key53">5</div>
+                        <div class="key_empty" id="key54">6</div>
+                        <div class="key_empty" id="key55">7</div>
+                        <div class="key_empty" id="key56">8</div>
+                        <div class="key_empty" id="key57">9</div>
+                        <div class="key_empty" id="key48">0</div>
+                        <div class="key_empty" id="key189">-</div>
+                        <div class="key_empty" id="key187">=</div>
+                        <div class="key_empty" id="key8" style="width: 135px;">←</div>
+                        <div class="key_empty" id="key45" style="margin-left: 40px;">Ins</div>
+                        <div class="key_empty" id="key36">Home</div>
+                        <div class="key_empty" id="key33">PgUp</div>
+                        <div class="key_empty" id="key12" style="margin-left: 30px;">Nums</div>
+                        <div class="key_empty" id="key111">/</div>
+                        <div class="key_empty" id="key106">*</div>
+                        <div class="key_empty" id="key109">-</div>
+                    </div>
+                    <div class="K_row3" style="position: relative;">
+                        <div class="key_empty" id="key9" style="width: 100px;">Tab</div>
+                        <div class="key_empty" id="key81">Q</div>
+                        <div class="key_empty" id="key87">W</div>
+                        <div class="key_empty" id="key69">E</div>
+                        <div class="key_empty" id="key82">R</div>
+                        <div class="key_empty" id="key84">T</div>
+                        <div class="key_empty" id="key89">Y</div>
+                        <div class="key_empty" id="key85">U</div>
+                        <div class="key_empty" id="key73">I</div>
+                        <div class="key_empty" id="key79">O</div>
+                        <div class="key_empty" id="key80">P</div>
+                        <div class="key_empty" id="key219">[</div>
+                        <div class="key_empty" id="key221">]</div>
+                        <div class="key_empty" id="key220" style="width: 95px;">\</div>
+                        <div style="margin-left: 40px;">Del</div>
+                        <div>End</div>
+                        <div>PgDn</div>
+                        <div class="key_empty" id="key103" style="margin-left: 30px;">7</div>
+                        <div class="key_empty" id="key104">8</div>
+                        <div class="key_empty" id="key105">9</div>
+                        <div class="key_empty" id="key107" style="height: 128px; position: absolute;top: 0;left: 1488px;line-height: 133px;">+</div>
+                    </div>
+                    <div class="K_row4">
+                        <div class="key_empty" id="key20" style="width: 140px;">Caps</div>
+                        <div class="key_empty" id="key65">A</div>
+                        <div class="key_empty" id="key83">S</div>
+                        <div class="key_empty" id="key68">D</div>
+                        <div class="key_empty" id="key70">F</div>
+                        <div class="key_empty" id="key71">G</div>
+                        <div class="key_empty" id="key72">H</div>
+                        <div class="key_empty" id="key74">J</div>
+                        <div class="key_empty" id="key75">K</div>
+                        <div class="key_empty" id="key76">L</div>
+                        <div class="key_empty" id="key186">;</div>
+                        <div class="key_empty" id="key222">'</div>
+                        <div style="width: 122px;">ENTER</div>
+                        <div class="key_empty" id="key100" style="margin-left: 270px;">4</div>
+                        <div class="key_empty" id="key101">5</div>
+                        <div class="key_empty" id="key102">6</div>
+                    </div>
+                    <div class="K_row5" style="position: relative;">
+                        <div class="key_empty" id="ShiftLeft" style="width: 160px;">Shift</div>
+                        <div class="key_empty" id="key90">Z</div>
+                        <div class="key_empty" id="key88">X</div>
+                        <div class="key_empty" id="key67">C</div>
+                        <div class="key_empty" id="key86">V</div>
+                        <div class="key_empty" id="key66">B</div>
+                        <div class="key_empty" id="key78">N</div>
+                        <div class="key_empty" id="key77">M</div>
+                        <div class="key_empty" id="key188">,</div>
+                        <div class="key_empty" id="key190">.</div>
+                        <div class="key_empty" id="key191">/</div>
+                        <div class="key_empty" id="ShiftRight" style="width: 170px;">Shift</div>
+                        <div class="key_empty" id="key38" style="margin-left: 108px;">⇧</div>
+                        <div class="key_empty" id="key97" style="margin-left: 97px;">1</div>
+                        <div class="key_empty" id="key98">2</div>
+                        <div class="key_empty" id="key99">3</div>
+                        <div style="height: 128px; position: absolute;top: 0;left: 1488px;line-height: 133px;">Enter</div> 
+                    </div>
+                    <div class="K_row6" style="">
+                        <div class="key_empty" id="key17">Ctrl</div>
+                        <div class="key_empty" id="key91">Win</div>
+                        <div class="key_empty" id="key18">Alt</div>
+                        <div class="key_empty" id="key32" style="width: 540px;">Space</div>
+                        <div>Alt</div>
+                        <div>FN</div>
+                        <div>Menu</div>
+                        <div>Ctrl</div>
+                        <div class="key_empty" id="key37" style="margin-left: 40px;">⇦</div>
+                        <div class="key_empty" id="key40">⇩</div>
+                        <div class="key_empty" id="key39">⇨</div>
+                        <div class="key_empty" id="key96" style="margin-left: 29px; width: 128px;">0</div>
+                        <div class="key_empty" id="key110">.</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col keyboardlogP">
+                <table class="table keyboardlog">
+                    <thead>
+                        <tr>
+                            <th scope="col">按鍵編號</th>
+                            <th scope="col">狀態</th>
+                            <th scope="col">秒數</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">-</th>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        var R=255,G=0,B=0;
+        var getmode=1;
+        var slideVal=6; //滑桿值
+        var chkState=true; //開關 預設:開
+        var RGBid=0;
+        var arrtime={},arrstate={};//一個存秒數 一個存狀態
+        function changeRGB () { //負責加數值 之後呼叫changColor改變元素顏色
+            if(chkState==1){
+                if(R==255 && G!=255 && B==0){
+                    G++;
+                }else if(R!=0 && G==255 && B==0){
+                    R--;
+                }else if(R==0 && G==255 && B!=255){
+                    B++;
+                }else if(R==0 && G!=0 && B==255){
+                    G--;
+                }else if(R!=255 && G==0 && B==255){
+                    R++;
+                }else if(R==255 && G==0 && B!=0){
+                    B--;
+                }
+                changColor();
+            }
+        }
+        function changColor(){
+            $(document).ready(function(){
+                $('.keyboard >div >div').css('box-shadow' ,'0px 0px 8px 8px rgb('+R+','+G+','+B+')');
+                $('.keyboard >div >div').css('color' ,'rgb('+R+','+G+','+B+')');
+            });
+        }
+        function keyboardmode(){ //若有任何改變相關就會呼叫相對應的事
+            $(document).ready(function(){
+                $('.keyboard').focus();
+                var color=$("#modecolor").val();
+                clearInterval(RGBid);
+                $(".keyboard >div >div").css('animation','none');
+                if(chkState==true){ /* */
+                    if(getmode==1){ //固定顏色
+                        setTimeout(function(){
+                            $(".keyboard >div >div").css('box-shadow','0px 0px 8px 8px'+color);
+                            $(".keyboard >div >div").css('color',color);
+                        },200);
+                    }else if(getmode==2){ //呼吸燈 
+                        $(".keyboard >div >div").css('box-shadow','0px 0px 8px 8px'+color);
+                        $(".keyboard >div >div").css('color',color);
+                        $(".keyboard >div >div").css('animation','hoxi '+slideVal+'s infinite');
+                    }else if(getmode==3){ //RGB循環
+                        $(".keyboard >div >div").css('animation','none');
+                        var temp=slideVal+1;
+                        RGBid = setInterval(function() {
+                            changeRGB();
+                        },temp);   
+                    }else if(getmode==4){ //RGB呼吸
+                        var temp=slideVal+8;
+                        $(".keyboard >div >div").css('animation','RGBhoxi '+temp +'s  infinite');
+                    }
+
+                }else{
+                    clearInterval(RGBid);
+                    setTimeout(function(){
+                        $(".keyboard >div >div").css('animation','none');
+                        $(".keyboard >div >div").css('box-shadow','0px 0px 8px 8px rgb(0, 0, 0)');
+                        $(".keyboard >div >div").css('color','rgb(98, 98, 98)');
+                    },200);
+                       
+                }
+            });
+        }
+        $(document).ready(function(){
+            
+            $('#modeselect').change(function(){ //選擇模式改變
+                getmode=this.value;
+                keyboardmode();
+            });
+            $("#modecolor").change(function(){ //選擇顏色改變
+                keyboardmode();
+            });
+            $('.turnBlock').click(function(){ //開關改變
+                var v=$("#RGB_control").is(":checked");
+                $("#RGB_control").attr("checked",!v);
+                chkState=!v;
+                keyboardmode();
+            });
+            $('.clearbtn').click(function(){
+                $('.keyboard >div >div').css('background-color','rgb(60, 60, 60)');
+                $('.keyboardlog tbody').html('<tr><th scope="row">-</th><td>-</td><td>-</td></tr>');
+            });
+            $(document).keydown(function(event){
+                thekey=event.keyCode;
+                thecode=event.code;
+                if(arrstate[thecode]!=1){ //防止重複覆蓋
+                    arrtime[thecode]=new Date().getTime(); //將第一次按下的秒數存進去
+                    arrstate[thecode]=1;//呼應防止重複
+                    if(thecode=="ShiftLeft" || thecode=="ShiftRight"){ //額外處理案件
+                        $('#'+thecode).css('background-color','rgb(179, 117, 0)');
+                    }else{
+                        $('#key'+event.keyCode).css('background-color','rgb(179, 117, 0)');
+                    }
+                    clearcode=thecode.replace('Key', '');
+                    $(".keyboardlog").prepend('<tr><th scope="row">'+clearcode+'</th><td>按下</td><td>-</td></tr>');
+
+                }    
+            })
+            $(document).keyup(function(event){
+                thekey=event.keyCode; //記錄案件英文碼
+                thecode=event.code;
+                temp=(new Date().getTime()-arrtime[thecode])/1000; //記錄目前-上次記錄時間
+                arrstate[thecode]=0; //按下狀態為0
+                if(thecode=="ShiftLeft" || thecode=="ShiftRight"){
+                    $('#'+thecode).css('background-color','#f8b654');
+                }else{
+                    $('#key'+event.keyCode).css('background-color','#f8b654');
+                }
+                clearcode=thecode.replace('Key', '');
+                $(".keyboardlog").prepend('<tr class="log_tr_bck"><th scope="row">'+clearcode+'</th> <td>放開</td> <td>'+temp+'秒</td> </tr>');
+
+            })
+
+            $('#slider').slider({ //滑桿數值 以及滑動時所做的函式：呼叫改變鍵盤色
+                min: 0,
+                max: 10,
+                step: 1,
+                value: 5,
+                slide: function(e, ui) {
+                    slideVal=Math.round(ui.value)+1;
+                    keyboardmode();
+                },
+            });
+            
+        });
+    </script>
+    <style>
+        .keyboardlogP{
+            overflow: auto;
+            height: 500px;
+            display: block;
+            border:4px black solid;  
+        }
+        .keyboardlog{
+            text-align: center;
+        }
+        .log_tr_bck{
+            background-color: rgb(255, 196, 0);
+        }
+        *{
+            ime-mode: disabled;
+        }
+        #hder{
+            background-color: aliceblue;
+        }
+        #slider span{
+            background-color: rgb(73, 73, 73) !important;
+        }
+        #slider span:hover{
+            background-color: gray !important;
+        }
+        #slider span:active{
+            background-color: rgb(253, 224, 116) !important;
+        }
+        #slider::after{
+            content:"快";
+            position: absolute;
+            top: -40px;
+            left: 1%;
+            color:rgb(255, 94, 94);
+            box-shadow: 0px 0px 3px 3px rgb(255, 0, 0);
+        }
+        #slider::before{
+            content:"慢";
+            position: absolute;
+            top: -40px;
+            right: 1%;
+            color:rgb(2, 86, 255);
+            box-shadow: 0px 0px 3px 3px rgb(0, 0, 255);
+        }
+        .choosecolor{
+            margin-top: 5px;
+            background-color: rgb(204, 204, 204);
+            color:black;
+        }
+        .myoption{
+            border: black 2px solid;
+        }
+        .myoption .col-12{
+            /* height: 130px; */
+            padding: 15px;
+            /* width: 100%; */
+            background-color: rgb(39, 39, 39);
+            color:white;
+            border:white solid 5px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .myoption .col-12:nth-child(2){
+            cursor: pointer;
+        }
+        .myoption .col-12:nth-child(2):hover{
+            background-color: gray;
+            color:white;
+        }
+        .ICON_turn{
+            position: relative;
+            margin-top: 10px;
+            box-shadow: 0px 0px 1px 4px white;
+            /* border:white 5px solid; */
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            /* overflow: hidden; */
+            
+        }
+
+        .ICON_turn .color{
+            position: relative;
+            top: 5px;
+            left: 5px;
+            border-radius: 30px !important;
+            width: 30px;
+            height: 30px;
+            background-color: gold;
+            transition: all ease-in .2s;
+
+        }
+        .ICON_turn .circle{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+            left:5px;
+            border-radius: 35px;
+            background-color: white;
+            transition: all ease-in .2s;
+            
+        }
+        #RGB_control{
+            display: none;
+        }
+        #RGB_control:checked ~ .color{
+            width: 98%;
+            width: calc(100% - 10px);
+        }
+        #RGB_control:checked ~ .circle{
+            left: calc(100% - 35px);
+        }
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .container{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 80px;
+            z-index: 3;
+        }
+        .keyboardcol{
+            /* overflow: auto; */
+            /* width: 2900px !important; */
+            scale: 0.8;
+            transform-origin: left center;
+
+            /* overflow: auto; */
+        }
+        .keyboard{
+            position: relative;
+            padding: 20px;
+            margin-top: 20px;
+            padding-bottom: 200px;
+            background-color: black;
+            width: 1600px ;
+            border:black solid 3px;
+            border-radius: 10px;
+            /* scale: 0.8; */
+            transform-origin: left center;
+            overflow: hidden;
+        }
+        .keyboard::before{
+
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom:30px;
+            transform: translateX(-50px);
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            z-index: 99;
+            background: url("../media/mylogo.png");
+            background-size: 50px 50px;
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            filter: invert(35%);
+        }
+        .keyboard::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: calc(100% - 10px);
+            height: 170px;
+            margin: 5px;
+            background-color: rgb(54, 54, 54);
+        }
+        .keyboard >div{
+            color:white;
+        }
+        .keyboard >div >div{
+            display: inline-block; /* 重點 */
+            width: 60px;
+            height: 60px;
+            background-color: rgb(60, 60, 60);
+            line-height: 60px;
+            text-align: center;
+            margin-left: 3px;
+            margin-top: 4px;
+            margin-right: 0px;
+            font-size: 130%;
+            font-size: 20px;
+            box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+            overflow: hidden;
+            border: black solid 3px;
+            border-radius: 3px;
+            /* animation: RGBhoxi 15s  infinite; */
+            /* box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+            animation: hoxi 3s infinite; */
+            user-select: none;
+        }
+        @keyframes hoxi{
+
+            0%{
+
+            }
+            50% {
+                box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0);
+                color:rgb(98, 98, 98)
+            }
+            100%{
+            }
+        }
+        /* @keyframes RGB{
+            0%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 0, 0);
+                color:rgb(255, 0, 0);
+            }
+            16%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 255, 0);
+                color:rgb(255, 255, 0);
+            }
+            33%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 255, 0);
+                color:rgb(0, 255, 0);
+            }
+            49%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 255, 255);
+                color:rgb(0, 255, 255);
+            }
+            68%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 0, 255);
+                color:rgb(0, 0, 255);
+            }
+            84%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 0, 255);
+                color:rgb(255, 0, 255);
+            }
+            100%{
+                box-shadow: 0px 0px 8px 8px red;
+                color:rgb(255, 0, 0);
+            }
+        } */
+        @keyframes RGBhoxi{
+            6%,18%,31%,43%,56%,68%,81%,93%{
+                box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0);
+                color:rgb(98, 98, 98)
+            }
+            0%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 0, 0);
+                color:rgb(255, 0, 0);
+            }
+            12.5%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 128, 0);
+                color:rgb(255, 128, 0);
+            }
+            25%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 255, 0);
+                color:rgb(255, 255, 0);
+            }
+            37.5%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 255, 0);
+                color:rgb(0, 255, 0);
+            }
+            50%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 255, 255);
+                color:rgb(0, 255, 255);
+            }
+            62.5%{
+                box-shadow: 0px 0px 8px 8px rgb(0, 0, 255);
+                color:rgb(0, 0, 255);
+            }
+            75%{
+                box-shadow: 0px 0px 8px 8px rgb(211, 0, 211);
+                color:rgb(255, 0, 255);
+            }
+            87.5%{
+                box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+                color:rgb(255, 255, 255);
+            }
+            100%{
+                box-shadow: 0px 0px 8px 8px red;
+                color:rgb(255, 0, 0);
+            }
+        }
+
+        .keyboard >div >div:hover{
+            background-color: rgb(255, 255, 255) !important;
+            color:rgb(0, 0, 0) !important;
+            cursor: pointer;
+            transition: all .15s;
+        }
+    </style>
+</body>
+
+</html>
