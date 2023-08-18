@@ -81,6 +81,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     overflow: hidden;
     color:black;
     height: 53px;
+    transition: 1s;
 }
 /* 左上角LOGO設定 */
 .logo{
@@ -163,7 +164,9 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
 .menu_btn_burger::after{
     transform: translateY(8px);
 }
-
+.header:has(#menu_control:checked){
+    background-color: white !important;
+}
 /* 漢堡選單to打叉動畫 */
 #menu_control:checked ~ .menu_btn .menu_btn_burger{
     transform:translateX(-40px);
@@ -214,6 +217,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
 }
 .menu a{
     /* background-color: #222; */
+    height: 70px;
     background-color: #fff  ;
     text-align: center;
     text-decoration: none;
@@ -226,6 +230,65 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     display: block;
     overflow:hidden;
 }
+
+.menu a:hover{
+    transition: all .38s;
+    height: auto - 3px;
+    background-color: #555;
+    color:#eee ;
+}
+.menu a:hover > .homeicon span{
+    background-color: white;
+    transition: all .38s;
+}
+.homeicon{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    transform: translateY(7px) translateX(-5px) scale(1.1);
+}
+
+.homeicon span{
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+
+.homeicon span:nth-child(1){
+    top: 0px;
+    left: 7.4px;
+    height: 20px;
+    width: 3px;
+    transform: rotate(45deg);
+}
+.homeicon span:nth-child(2){
+    top: 0px;
+    right: 7.4px;
+    height: 20px;
+    width: 3px;
+    transform: rotate(-45deg);
+}
+.homeicon span:nth-child(3){
+    top: 11px;
+    left: 6px;
+    height: 15px;
+    width: 3px;
+}
+.homeicon span:nth-child(4){
+    top: 11px;
+    right: 6px;
+    height: 15px;
+    width: 3px;
+}
+.homeicon span:nth-child(5){
+    bottom: -3px;
+    left: 13.75px;
+    height: 17px;
+    width: 3px;
+    transform: rotate(90deg);
+}
+
 .menu a::after{
     content:'';
     position: absolute;
@@ -279,7 +342,6 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
         position: relative;
         justify-content: space-between;
         display: flex;
-        
     }
     .menu{
         
@@ -330,7 +392,7 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
         transition: all .38s;
         height: auto - 3px;
         background-color: #555;
-        color:#eee;
+        color:#eee ;
         border-bottom: 1.5px solid #f00;
     }
     #hder {
