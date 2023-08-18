@@ -66,6 +66,7 @@ function myFunction() {
         $('.sect2_title p:nth-child(2)').css('transform',"translateX("+-1*temp+"%)");
         // console.log("1:"+temp);
         // console.log("2:"+tempOK);
+        // $('.sect1_img').css('transform','scale('+(2-tempOK).toFixed(2)+')');
         $('.sect1_img').css('transform','scale('+(2-tempOK).toFixed(2)+')');
 
     }else if(nowvYset>=sect1Yset-53 && nowvYBottomset<=sect2Yset){ //[3] 區塊2
