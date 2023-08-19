@@ -45,9 +45,65 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col">
-            說明區
-            <div style="color:red; font-size: 100px;text-align: center;">此區域內容整理中!</div>
+            <div class="col mytable">
+                <div class="row mytable_title">
+                    <div class="col-12"><h1>項目名稱:RGB 鍵盤按鍵測試</h1></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>作者</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-3"><h2>廖子科</h2></div>
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>版權資訊</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-3"><h4>Copyright © 2022-2023 廖子科 All rights reserved.</h4></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>初版日期</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-3"><h2>2022.06.09</h2></div>
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>最新版本日期</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-3"><h2>2023.08.20</h2></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>描述(設計理念)</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-9"><h5>將RGB燈光導入到鍵盤測試中，讓用戶能同時測試按鍵和欣賞燈光，燈光顏色部分提供自定義功能。</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>操作說明</h2></div>
+                    <div class="col-12 col-sm-7 col-lg-9"><h5 style="text-align: left;">
+                        功能列:<br>
+                        &nbsp;1.[燈光模式] 下方可以選擇模式(固定顏色、呼吸燈、RGB循環、RGB呼吸)。<br>&nbsp;&nbsp;&nbsp;&nbsp;顏色冒號後面(白色)點擊後可以選擇顏色。<br>
+                        &nbsp;2.[播放暫停] 可以控制鍵盤燈光開關(一開始是打開的) <br>
+                        &nbsp;3.[速度滑桿] 白色長型是軌道，灰黑色是桿子，可以滑動黑色控制燈光速度(桿子靠左變快,靠右變慢)。<br>
+                        &nbsp;4.[清除鍵盤狀態及紀錄] 就是可以刪除鍵盤按下時變色和最下面紀錄表，會恢復成最原始狀態。<br>
+                        鍵盤測試:<br>
+                        &nbsp;鍵盤按鍵按下去，你就知道了 (´・ω・`) <br>
+                        &nbsp;<span style="color:red;">最下面有一個區域會顯示你鍵盤的按鍵紀錄，會顯示你按下和放開，按壓秒數。</span><br>
+                    </h5></div>
+                </div>
+
+                <style>
+                    .mytable{
+                        text-align: center;
+                        /* border:3px solid black; */
+                        margin-bottom: 10px;
+                        border:2px  solid black;
+                    }
+
+                    .mytable h2 ,.mytable h5{
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        
+                    }
+                    .mytable_title{
+                        background-color: lightgray;
+                        border: 1px solid black;
+                    }
+                    .mytable .row:nth-child(n+2) >div{
+                        border:1px solid black;
+                    }
+                </style>
+                <!-- <div style="color:red; font-size: 100px;text-align: center;">此區域內容整理中!</div> -->
             </div>
         </div>
         <div class="row  myoption">
@@ -515,7 +571,7 @@
         .keyboard{
             position: relative;
             padding: 20px;
-            margin-top: 20px;
+            margin-top: 0px;
             padding-bottom: 200px;
             background-color: black;
             width: 1600px ;
