@@ -27,7 +27,9 @@
             <div class="logo">
                 <a href="index.html"><img src="media/mylogo.png" height="45px" alt="Logo"></a>
                 <a href="index.html">
-                    <p>Liao-Zike</p>
+                    <p>
+                        Liao-Zike
+                    </p>
                 </a>
             </div>
             <label for="menu_control" class="menu_btn">
@@ -58,12 +60,33 @@
                 <img src="media/Hello.gif" alt="" style="-webkit-user-drag: none;">
                 <!-- <input class="Welcome_btn" type="button" value="Hi (touch me!)">。 -->
                 <div class="Welcome_btn">
+                    <div class="monkey">🐒</div>
                     <div class="Welcome_btn_div">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
-                        <p>Hi (touch me!)</p>
+                        <p>
+                            Hi (touch me!)
+                        </p>
+                        <style>
+                            .monkey{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                opacity: 0.3;
+                                z-index: 6;
+                                scale:3;
+                                transition: scale 1s ease-in;
+                                padding: 1px;
+                                overflow: hidden;
+                            }
+                            .monkey:hover{
+                                background-color: rgba(240, 248, 255, 0);
+                                box-shadow: 0px 0px 0px 0px black;
+
+                            }
+                        </style>
                     </div>
                 </div>
                 <div class="sect1_more">↓ 往下查看更多 ↓</div>
@@ -607,12 +630,44 @@
         <p><b>↑</b></p>
     </a>
     <script src="source/jquery-3.6.3.min.js"></script>
+
+    
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script> -->
+
+
     <script src="main.js"></script>
     <script>
         AOS.init();
     </script>
-    <script>
-    </script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+        import { getDatabase, ref, push,set } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js";
+        const firebaseConfig = {
+          apiKey: "AIzaSyDX8qFhtRQhGBbX2kysf3oAvpKVkuelTNE",
+          authDomain: "liaozike-f0448.firebaseapp.com",
+          databaseURL: "https://liaozike-f0448-default-rtdb.firebaseio.com",
+          projectId: "liaozike-f0448",
+          storageBucket: "liaozike-f0448.appspot.com",
+          messagingSenderId: "392585661683",
+          appId: "1:392585661683:web:5f1680060683047f3e7b86",
+          measurementId: "G-WS2B055CY3"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const lzkDB = ref(db, 'lzkGithubIo'); 
+        var userAgent = navigator.userAgent;
+        var DBDate = new Date();
+
+        push(lzkDB, {
+            device: userAgent,
+            data: DBDate.toString() // 使用 toString() 將日期轉換成字串
+        });
+
+      </script>
 </body>
 
 </html>
