@@ -101,8 +101,38 @@ function myFunction() {
 //Touch me事件
 //隨機顏色系統
 stackR=255,stackG=255,stackB=255;
+var monkeyid=0,monkeyid2=0;
+function monkeyBIG(){
+    if(monkeyid!=0){
+        clearTimeout(monkeyid)
+        clearTimeout(monkeyid2)
+        monkeyid=0;
+        monkeyid2=0;
+        $('.monkey').css('scale','3');
+        $('.monkey').css('transition','scale 1s ease-in');
+    }
+    $('.monkey').css('scale','450');
+    setTimeout(function(){
+        $('.monkey').css('transition','scale 0s');
+        $('.monkey').css('scale','3');
+        setTimeout(function(){
+            $('.monkey').css('transition','scale 1s ease-in');
+        },50)
+    },950)
+}
 $(document).ready(function(){
+    $('.monkey').click(function(){
+        monkeyBIG();
+        stackR=Math.floor(Math.random()*256);
+        stackG=Math.floor(Math.random()*256);
+        stackB=Math.floor(Math.random()*256);
+        $('.myimg').css('background-color','rgba('+stackR+','+stackG+','+stackB+',1)');
+        if (window.scrollY >= sticky) {
+            hder.style['background-color']='rgb('+stackR+','+stackG+','+stackB+')';
+        }
+    })
     $('.Welcome_btn_div').click(function(){
+        monkeyBIG();
         stackR=Math.floor(Math.random()*256);
         stackG=Math.floor(Math.random()*256);
         stackB=Math.floor(Math.random()*256);
@@ -122,4 +152,4 @@ $(document).ready(function(){
         var value=obj.checked;
         if(value==true) obj.checked=false;
     })
-})
+});
