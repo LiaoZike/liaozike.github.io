@@ -1,7 +1,7 @@
 {
-  "name": "my-website",
+  "name": "liaozike.github.io",
   "version": "1.0.0",
   "scripts": {
     "build": "npm run build"
-  },
+  }
 }
