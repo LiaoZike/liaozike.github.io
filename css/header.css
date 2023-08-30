@@ -1,9 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    list-style: none;
     scroll-behavior: smooth;
-    
     font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
 }
 body{
@@ -328,9 +326,11 @@ body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
     text-decoration: none;
     transition: .2s ease-in;
     opacity: 0%;
+    z-index: 99;
 }
 .GoTop:hover{
     background-color: rgb(240, 202, 154);
+    color:rgb(68, 68, 68)
 }
 
 /**********   平板規格以上 (桌機)   **********/

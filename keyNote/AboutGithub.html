@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../media/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../source/bootstrap.min.css">
+    <linK rel="stylesheet" href="../source/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../source/aos.css">
+    <title>筆記_Github</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../source/aos.js"></script>
+    <script src="../source/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!--導覽列-->
+    <div id="hder">
+      <div class="header">
+          <input type="checkbox" id="menu_control" class="menu_control">
+          <div class="logo">
+              <a href="../index.html"><img src="../media/mylogo.png" height="45px" alt="Logo"></a>
+              <a href="../index.html">
+                  <p>Liao-Zike</p>
+              </a>
+          </div>
+          <label for="menu_control" class="menu_btn">
+              <div class="menu_btn_burger"></div>
+          </label>
+          <div class="menu coolbar">
+              <nav>
+                  <a href="../index.html"><div class="homeicon"><span></span><span></span><span></span><span></span><span></span></div>首頁</a>
+                  <a href="../index.html#a_sect2" class="aboutme">關於我</a>
+                  <a href="../index.html#a_sect3">證照與競賽</a>
+                  <a href="../index.html#a_sect6">作品與小遊戲</a>
+                  <a href="https://peing.net/zh-TW/cf6f2a95176852" target="_blank">匿名信箱</a>
+                  <a href="../log.html">網站維護</a>
+              </nav>
+          </div>
+      </div>
+  </div>
+    <!--首頁-->
+    <div class="content1 container">
+        <div class="row">
+            <div class="myphoto"><img src="myphoto.jpg" alt="大頭照" ></div>
+            <p class="myname">編輯者:Liao-Zike(廖子科) 最新編輯日期:2023/08/30</p>
+        </div>
+        <div class="row text">
+            <h1>Github使用筆記</h1>
+            <h2>建立專案</h2>
+            <ol start="1">
+                <li>點擊New repository</li>
+                <li>輸入專案(存儲庫)名稱</li>
+                <li>相關設定</li>
+                <li>建立專案(存儲庫)</li>
+            </ol>
+            <hr>
+            <h2>將檔案抓下來</h2>
+            <ol start="1">
+                <li>
+                    <p>取得你的網址 EX：&nbsp;<span style="background-color: antiquewhite;"><b>git@github.com:???/???.git</b></span></p>
+                    <div class="photo"><img src="AboutGithub/geturl.jpg" alt="取得網址" srcset=""></div>
+                </li>
+                <li><p>開啟CMD (命令提示字元)</p></li>
+                <li><p>切到你要抓的目的地資料夾</p></li>
+                <li>
+                    <p>輸入指令</p>
+                    <div class="code">
+                        git clonen https://github.com/LiaoZike/liaozike.github.io.git
+                    </div>
+                </li>
+                <li>你的資料夾裡面就會多出一個資料夾，檔名為你儲存庫的名稱。</li>
+            </ol>
+            <hr>
+            <h2>將檔案上傳</h2>
+            <ol start="1">
+                <li>
+                    <p>CMD路徑切到那個資料夾裡面 EX:/TODO</p>
+                </li>
+                <li>
+                    <p>輸入指令</p>
+                    <div class="code">
+                        git add .
+                    </div>
+                </li>
+                <li>
+                    <p>輸入指令</p>
+                    <div class="code">
+                        git commit -m "Uploading code"
+                    </div>
+                </li>
+                <li>
+                    <p>輸入指令</p>
+                    <div class="code">
+                        git push
+                    </div>
+                </li>
+                <li><p>過程可能需要登入驗證</p></li>
+            </ol>
+            <hr>
+            <h2>完成，可以到網站上檢查有無檔案。</h2>
+            <div style="height: 50px;"></div>
+        </div>
+    </div>
+
+
+    <style>
+        body{
+            background-color:rgb(248, 248, 239);
+            min-height: 100vh;
+        }
+        #hder{
+            background-color: aliceblue;
+        }
+        .content1{
+            position: relative;
+            top: 100px;
+        }
+        .row{
+            display: flex;
+            align-items: center; /* 垂直居中對齊 */   
+        }
+        .myphoto{
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+        }
+        .myphoto img{
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid rgb(81, 81, 81);
+        }
+        .photo img{
+            width: 100%;
+        }
+        .myname{
+            width: auto;
+            font-size: 24px;
+            opacity: 60%;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 10px;
+        }
+        h1,h2,h3,h4,h5{
+            font-weight: bold;
+        }
+        p{
+            margin: 8px 5px!important;
+        }
+        h1{
+            margin-top: 30px !important;
+            padding-bottom: 10px !important;
+            border-bottom: 1px solid rgb(208, 208, 208);
+        }
+        ol,li{
+	        list-style:decimal !important;
+            margin: 10px 15px!important;
+        }
+        .code{
+            background-color: black;
+            color:white;
+            padding: 20px;
+            border-left: 4px rgb(255, 158, 74) solid;
+        }
+        .footer{
+            margin-top: 100px;
+            height: 100px;
+            width: 100%;
+            background-color: peru;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 30%;
+        }
+        
+        .footer p{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:white;
+            font-size: 20px;
+        }
+    </style>
+    <script src="../source/jquery-3.6.3.min.js"></script>
+</body>
+
+<div class="footer">
+    <p>廖子科 Liao-Zike © All RIGHTS RESERVED.</p>
+ </div>
+</html>

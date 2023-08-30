@@ -109,21 +109,21 @@ body{
 .Welcome_btn :focus {
     background-color: #e3ea8a;
   }
-.Welcome_btn span {
+/* 拿掉太花了20230821
+ .Welcome_btn span {
     position: absolute;
     display: block;
     z-index: 1;
-    /*background: linear-gradient(90deg, transparent, #ff0);*/
+    /background: linear-gradient(90deg, transparent, #ff0);/
     background: linear-gradient(90deg, transparent, #ff0);
-}
-
-/*選取第一個元素*/
-.Welcome_btn span:nth-child(1) {
+} */
+/* .Welcome_btn span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
     height: 6px;
-    animation: Welcome_btn-anim1 1s linear infinite; /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/    
+    animation: Welcome_btn-anim1 1s linear infinite; 
+    /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放/    
 }
 .Welcome_btn span:nth-child(2) {
     top: -100%;
@@ -133,7 +133,6 @@ body{
     background: linear-gradient(180deg, transparent, #ff0);
     animation: Welcome_btn-anim2 1s linear infinite;;
     animation-delay: 0.5s
-     /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/
 }
 .Welcome_btn span:nth-child(3) {
     bottom: 0;
@@ -153,11 +152,9 @@ body{
     height: 100%;
     background: linear-gradient(0deg, transparent, #ff0);
     animation: Welcome_btn-anim4 1s linear infinite;
-    animation-delay: 1.5s
-   /*linear定義動畫轉變時時間的加速曲線 infinite無限撥放*/    
+    animation-delay: 1.5s 
 }
 @keyframes Welcome_btn-anim1 {
-    /*預設值*/
   0% {
     left: -100%;
   }
@@ -166,7 +163,6 @@ body{
   }
 }
 @keyframes Welcome_btn-anim2 {
-    /*預設值*/
   0% {
     top: -100%;
   }
@@ -189,7 +185,7 @@ body{
     50%,100% {
         bottom: 100%;
     }
-}
+}*/
 .sect1_more{
     width: 100%;
     height: auto;
@@ -292,7 +288,24 @@ body{
     color:white;
 }
 
-
+.section3_title,.section4_title,.section5_title
+,.section6_title,.section7_title,.section8_title
+,.section9_title{
+    height: 30vh;
+    width: 100%;
+    line-height: 30vh;
+    text-align: center;
+    font-size: 10vmin;
+    overflow: hidden;
+}
+.section4_description,.section5_description,.section6_description
+,.section7_description,.section8_description,.section9_description{
+    /*font-size: min(50px,2vh,4vw); 20px 3vh*/
+    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
+    line-height: calc(min(50px,2vh,4vw) + 10px);
+    padding: 30px 50px;
+    color:white;
+}
 
 .section3{
     position: relative;
@@ -302,11 +315,6 @@ body{
 }
 .section3_title{
     background-color: rgb(255, 201, 201);
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
 }
 .section3_title p {
     display: block;
@@ -378,20 +386,8 @@ body{
 }
 .section4_title{
     background-color: rgb(255, 213, 179);
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
-    overflow: hidden;
 }
 .section4_description{
-    font-size: min(50px,2vh,4vw); /*20px 3vh*/
-    
-    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,2vh,4vw) + 10px);
-    padding: 30px 50px;
-    color:white;
     /* box-shadow: 5px 2px 3px 3px rgb(255, 255, 170); */
     box-shadow: 5px 2px 3px 3px rgb(255, 213, 179);
 }
@@ -437,12 +433,6 @@ body{
     margin-bottom: 250px;
 }
 .section5_description{
-    /* font-size: min(50px,2vh,4vw); 20px 3vh */
-    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,2vh,4vw) + 10px);
-    padding: 30px 50px;
-    color:white;
-    /* box-shadow: 5px 2px 3px 3px rgb(255, 255, 170); */
     box-shadow: 5px 2px 3px 3px rgb(255, 245, 170);
 }
 @media screen and (max-width:400px) { 
@@ -452,12 +442,6 @@ body{
 }
 .section5_title{
     background-color: rgb(255, 245, 170);
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
-    overflow: hidden;
 }
 .section5_content{
     margin-top: 50px;
@@ -522,21 +506,11 @@ body{
 .section6_title{
     position: relative;
     background-color: rgb(221, 255, 222) !important;
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
-    overflow: hidden;
     z-index: 2;
 }
 .section6_description{
     position: relative;
     z-index: 2;
-    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,2vh,4vw) + 10px);
-    padding: 30px 50px;
-    color:white;
     box-shadow: 5px 2px 3px 3px rgb(221, 255, 222);
 }
 .section6_content{
@@ -652,18 +626,8 @@ body{
 }
 .section7_title{
     background-color: rgb(137, 186, 255);
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
-    overflow: hidden;
 }
 .section7_description{
-    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,2vh,4vw) + 10px);
-    padding: 30px 50px;
-    color:white;
     box-shadow: 5px 2px 3px 3px rgb(137, 186, 255);
 }
 .section7_content{
@@ -679,38 +643,69 @@ body{
     margin-bottom: 200px;
 }
 .section8_title{
-    background-color: rgb(219, 181, 255);
-    height: 30vh;
-    width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
-    overflow: hidden;
+    background-color: rgb(236, 178, 255);
 }
 .section8_description{
-    font-size: min(50px,2.5vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,2vh,4vw) + 10px);
-    padding: 30px 50px;
-    color:white;
-    box-shadow: 5px 2px 3px 3px rgb(219, 181, 255);
+    box-shadow: 5px 2px 3px 3px rgb(236, 178, 255);
 }
 .section8_content{
     margin-top: 50px;
 }
-.footer{
+
+
+
+.section9{
     margin-top: 50px;
     position: relative;
     width: 100%;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
-.footer_title{
-    background-color: rgb(157, 135, 135);
-    height: 30vh;
+
+.section9_title{
+    background-color: rgb(255, 255, 255);
+}
+
+.section9_description{
+    box-shadow: 5px 2px 3px 3px rgb(255, 255, 255);
+}
+.section9_content{
+    margin-top: 50px;
+}
+.section9 a{
+    text-decoration: none;
+    background-color: #eee;
+    color:black;
+    padding: 20px;
+    border-radius: 10px;
+}
+.section9 a:hover{
+    background-color: #e3ea8a;
+    transition: all .5s;
+}
+
+
+
+.footer{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
     width: 100%;
-    line-height: 30vh;
-    text-align: center;
-    font-size: 10vmin;
+    background-color: rgb(157, 135, 135);
     overflow: hidden;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+}
+.footer p{
+    color:white;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    text-align: center;
+    font-size: x-large;
 }
 .section8 a{
     margin-top: 20  px;
