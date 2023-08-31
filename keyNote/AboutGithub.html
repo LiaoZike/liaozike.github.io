@@ -47,7 +47,7 @@
     <div class="content1 container">
         <div class="row">
             <div class="myphoto"><img src="myphoto.jpg" alt="大頭照" ></div>
-            <p class="myname">編輯者:Liao-Zike(廖子科) 最新編輯日期:2023/08/30</p>
+            <p class="myname">編輯者:Liao-Zike(廖子科) 最新編輯日期:2023/08/31</p>
         </div>
         <div class="row text">
             <h1>Github使用筆記</h1>
@@ -59,10 +59,10 @@
                 <li>建立專案(存儲庫)</li>
             </ol>
             <hr>
-            <h2>將檔案抓下來</h2>
+            <h2>git clone</h2>
             <ol start="1">
                 <li>
-                    <p>取得你的網址 EX：&nbsp;<span style="background-color: antiquewhite;"><b>git@github.com:???/???.git</b></span></p>
+                    <p>取得你的網址 EX：&nbsp;<span style="background-color: antiquewhite;"><b>https://github.com/LiaoZike/liaozike.github.io.git</b></span></p>
                     <div class="photo"><img src="AboutGithub/geturl.jpg" alt="取得網址" srcset=""></div>
                 </li>
                 <li><p>開啟CMD (命令提示字元)</p></li>
@@ -70,13 +70,13 @@
                 <li>
                     <p>輸入指令</p>
                     <div class="code">
-                        git clonen https://github.com/LiaoZike/liaozike.github.io.git
+                        <p> git clone https://github.com/LiaoZike/liaozike.github.io.git</p>
                     </div>
                 </li>
                 <li>你的資料夾裡面就會多出一個資料夾，檔名為你儲存庫的名稱。</li>
             </ol>
             <hr>
-            <h2>將檔案上傳</h2>
+            <h2>推到遠端</h2>
             <ol start="1">
                 <li>
                     <p>CMD路徑切到那個資料夾裡面 EX:/TODO</p>
@@ -102,7 +102,9 @@
                 <li><p>過程可能需要登入驗證</p></li>
             </ol>
             <hr>
-            <h2>完成，可以到網站上檢查有無檔案。</h2>
+            
+            <h2>git pull</h2>
+
             <div style="height: 50px;"></div>
         </div>
     </div>
@@ -162,10 +164,17 @@
             margin: 10px 15px!important;
         }
         .code{
+            display: block;
+            width: 100%;
             background-color: black;
             color:white;
             padding: 20px;
             border-left: 4px rgb(255, 158, 74) solid;
+        }
+        .code p{
+            display: block;
+
+            width: 50vw !important;
         }
         .footer{
             margin-top: 100px;
