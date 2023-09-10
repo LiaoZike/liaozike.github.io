@@ -16,7 +16,7 @@ body{
     overflow: hidden;
 }
 .sect1_img{
-    background-image: url('./media/background.jpg'); /*圖片*/
+    background-image: url('./media/background.webp'); /*圖片*/
     background-size: cover;
     background-position: center;
     /* -webkit-filter:hue-rotate(180deg) brightness(.3);*/
@@ -51,7 +51,7 @@ body{
     100% { box-shadow: 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(255, 0, 0, 1), 0 0 20px rgba(255, 0, 0, 1),0 0 55px rgba(255, 0, 0, 1); }
   }
 
-.Welcome img{
+.Welcome video{
     margin-top: 20vh;
     border-radius:10px;
     display: block;
@@ -59,7 +59,7 @@ body{
     border: 3px solid rgb(0, 0, 0);
     cursor: help;
     opacity: 45%;
-    animation: rgbCycle 5s linear infinite;
+    /* animation: rgbCycle 5s linear infinite; */
 }
 .Welcome_btn{   
     background-color: #ffffff8f;
@@ -685,28 +685,7 @@ body{
 
 
 
-.footer{
-    margin-top: 50px;
-    padding-bottom: 50px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    background-color: rgb(157, 135, 135);
-    overflow: hidden;
-    border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
-}
-.footer p{
-    color:white;
-    height: 100px;
-    width: 100%;
-    line-height: 100px;
-    text-align: center;
-    font-size: x-large;
-}
+
 .section8 a{
     margin-top: 20  px;
     display: block;
@@ -733,7 +712,7 @@ body{
     .sect2_title{
         margin-top: max(5%,100px);
     }
-    .Welcome img{
+    .Welcome video{
         margin-top: 20vh;
     }
     .Welcome_btn{
