@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../source/bootstrap.min.css">
     <linK rel="stylesheet" href="../source/reset.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../source/jquery-ui.css">
     <title>LZK_Website</title>
     <script src="../source/bootstrap.bundle.min.js"></script>
@@ -53,7 +54,7 @@
                     <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>作者</h2></div>
                     <div class="col-12 col-sm-7 col-lg-3"><h2>廖子科</h2></div>
                     <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>版權資訊</h2></div>
-                    <div class="col-12 col-sm-7 col-lg-3"><h4>Copyright © 2022-2023 廖子科 All rights reserved.</h4></div>
+                    <div class="col-12 col-sm-7 col-lg-3"><h4 class="fixtime">Copyright © 2022-JSGetNowYear 廖子科 All rights reserved.</h4></div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-5 col-lg-3" style="background-color: antiquewhite;"><h2>初版日期</h2></div>
@@ -201,7 +202,7 @@
                         <div id="key45" style="margin-left: 40px;">Ins</div>
                         <div id="key36">Home</div>
                         <div id="key33">PgUp</div>
-                        <div id="key12 key144" style="margin-left: 30px;">Nums</div>
+                        <div id="key12 key144" style="margin-left: 28px;">Nums</div>
                         <div id="key111">/</div>
                         <div id="key106">*</div>
                         <div id="key109">-</div>
@@ -227,7 +228,7 @@
                         <div id="key103" style="margin-left: 30px;">7</div>
                         <div id="key104">8</div>
                         <div id="key105">9</div>
-                        <div id="key107" style="height: 128px; position: absolute;top: 0;left: 1488px;line-height: 133px;">+</div>
+                        <div id="key107" style="height: 128px; position: absolute;top: 0;left: 1504px;line-height: 133px;">+</div>
                     </div>
                     <div class="K_row4">
                         <div id="key20" style="width: 140px;">Caps</div>
@@ -243,7 +244,7 @@
                         <div id="key186">;</div>
                         <div id="key222">'</div>
                         <div id="key13" style="width: 122px;">ENTER</div>
-                        <div id="key100" style="margin-left: 270px;">4</div>
+                        <div id="key100" style="margin-left: 273px;">4</div>
                         <div id="key101">5</div>
                         <div id="key102">6</div>
                     </div>
@@ -261,10 +262,10 @@
                         <div id="key191">/</div>
                         <div id="ShiftRight" style="width: 170px;">Shift</div>
                         <div id="key38" style="margin-left: 108px;">⇧</div>
-                        <div id="key97" style="margin-left: 97px;">1</div>
+                        <div id="key97" style="margin-left: 100px;">1</div>
                         <div id="key98">2</div>
                         <div id="key99">3</div>
-                        <div id="NumpadEnter" style="height: 128px; position: absolute;top: 0;left: 1488px;line-height: 133px;">Enter</div> 
+                        <div id="NumpadEnter" style="height: 128px; position: absolute;top: 0;left: 1504px;line-height: 133px;">Enter</div> 
                     </div>
                     <div class="K_row6" >
                         <div id="ControlLeft">Ctrl</div>
@@ -278,7 +279,7 @@
                         <div id="key37" style="margin-left: 40px;">⇦</div>
                         <div id="key40">⇩</div>
                         <div id="key39">⇨</div>
-                        <div id="key96" style="margin-left: 29px; width: 128px;">0</div>
+                        <div id="key96" style="margin-left: 35px; width: 128px;">0</div>
                         <div id="key110">.</div>
                     </div>
 
@@ -440,7 +441,10 @@
                     keyboardmode();
                 },
             });
-            
+            $(document).ready(function(){
+                var year=new Date().getFullYear();
+                $('.fixtime').html("Copyright © 2022-"+year+" 廖子科 All rights reserved.")
+            })
         });
     </script>
     <style>
@@ -579,7 +583,7 @@
             margin-top: 0px;
             padding-bottom: 200px;
             background-color: black;
-            width: 1600px ;
+            width: 1615px ;
             border:black solid 3px;
             border-radius: 10px;
             /* scale: 0.8; */
@@ -727,25 +731,6 @@
             color:rgb(0, 0, 0) !important;
             cursor: pointer;
             transition: all .15s;
-        }
-        .footer{
-            position: relative;
-            margin-top: 100px;
-            height: 100px;
-            width: 100%;
-            background-color: peru;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-top-left-radius: 30%;
-            border-top-right-radius: 30%;
-        }
-        
-        .footer p{
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color:white;
-            font-size: 20px;
         }
         
     </style>
