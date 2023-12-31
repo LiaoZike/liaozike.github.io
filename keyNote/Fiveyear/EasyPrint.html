@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .row{
+        display: flex;
+        align-items: center; /* 垂直居中對齊 */   
+    }
+    .myphoto{
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+    }
+    .myphoto img{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid rgb(81, 81, 81);
+    }
+    .photo img{
+        width: 100%;
+    }
+    .myname{
+        width: auto;
+        font-size: 24px;
+        opacity: 60%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-left: 10px;
+    }
+    .sendTable{
+        padding: 8px 10px;
+        background-color: rgb(0, 120, 255);
+        color:white;
+        border-radius: 5px;
+        border: solid 2px rgb(4, 96, 255);
+        cursor: pointer;
+    }
+    .sendTable:hover{
+        background-color: rgb(2, 85, 180);
+        transition: all .3s;
+    }
+    table{
+        margin-bottom: 2px;
+        margin-left: 3px;
+        background-color: antiquewhite;
+    }
+    table td{
+        background-color: white;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        transition: .05s;
+        color:transparent;  
+    }
+    table td:hover{
+        background-color:rgba(0, 219, 219, 0.325);
+    }
+
+    .tablediv1{
+        display: flex;
+        flex-direction: row;
+    }
+    .tablediv2{
+        display: flex;
+        flex-direction: row;
+    }
+    .showinfo{
+        margin-top: 10px;
+        outline: 5px solid black;
+        height: 200px;
+    }
+    .hoverDiv{
+        background-color: black !important;
+    }
+    .hoverDiv:hover{
+        background-color:aquamarine;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="myphoto"><img src="../myphoto.jpg" alt="大頭照" ></div>
+            <p class="myname">編輯者:Liao-Zike(廖子科) 最新編輯日期:2023/12/31</p>
+        </div>
+
+        <div class="tablediv1">
+            <table border="1" class="mytable1_1">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table border="1" class="mytable2_1">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="tablediv2">
+            <table border="1" class="mytable1_2">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table border="1"  class="mytable2_2">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <button class="sendTable">送出Send</button>
+        <div class="showinfo">
+
+        </div>
+        <br>
+        ※微處理機上課NUVOTON輔助(LCD字)工具<br>
+        ※點下去黑色代表要顯示的，白色代表不要的<br>
+        ※完成後要記得送出<br>
+        <script src="../../source/jquery-3.6.3.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('table td').html('0');
+                $('table td').click(function(){
+                    fetchtdText=$(this).html();
+                    if(fetchtdText==0){
+                        $(this).html(1);
+                        $(this).addClass('hoverDiv');
+                    }else{
+                        $(this).html(0);
+                        $(this).removeClass('hoverDiv');
+                    }
+                })
+                $('.sendTable').click(function(){
+                    Arr_1=[];
+                    Arr_2=[];
+                    Arr_3=[];
+                    Arr_4=[];
+                    for(i=0;i<8;++i){ //左邊字-上
+                        Arr_1[i]='';
+                        temp2data='';
+                        for(j=0;j<8;++j){
+                            temp=".mytable1_1";
+                            temptd=$($(temp).find('tr').eq(7-j)).find('td').eq(i).html();
+                            temp2data+=temptd;
+                        }
+                        var decimalNumber = parseInt(temp2data, 2);
+                        var hexadecimalNumber = decimalNumber.toString(16);
+                        Arr_1[i]=hexadecimalNumber;
+                    }
+                    
+                    for(i=0;i<8;++i){ //左邊字-下
+                        Arr_2[i]='';
+                        temp2data='';
+                        for(j=0;j<8;++j){
+                            temp=".mytable1_2";
+                            temptd=$($(temp).find('tr').eq(7-j)).find('td').eq(i).html();
+                            temp2data+=temptd;
+                        }
+                        var decimalNumber = parseInt(temp2data, 2);
+                        var hexadecimalNumber = decimalNumber.toString(16);
+                        Arr_2[i]=hexadecimalNumber;
+                    }
+                    for(i=0;i<8;++i){ //右邊字-上
+                        Arr_3[i]='';
+                        temp2data='';
+                        for(j=0;j<8;++j){
+                            temp=".mytable2_1";
+                            temptd=$($(temp).find('tr').eq(7-j)).find('td').eq(i).html();
+                            temp2data+=temptd;
+                        }
+                        var decimalNumber = parseInt(temp2data, 2);
+                        var hexadecimalNumber = decimalNumber.toString(16);
+                        Arr_3[i]=hexadecimalNumber;
+                    }
+                    for(i=0;i<8;++i){ //右邊字-下
+                        Arr_4[i]='';
+                        temp2data='';
+                        for(j=0;j<8;++j){
+                            temp=".mytable2_2";
+                            temptd=$($(temp).find('tr').eq(7-j)).find('td').eq(i).html();
+                            temp2data+=temptd;
+                        }
+                        var decimalNumber = parseInt(temp2data, 2);
+                        var hexadecimalNumber = decimalNumber.toString(16);
+                        Arr_4[i]=hexadecimalNumber;
+                    }
+                    $('.showinfo').html('');
+                    tempdata='';
+                    tempdata+='左邊字元：<br>';
+                    for(i=0;i<8;++i){
+                        if(Arr_1[i].length==1) tempdata=tempdata+"0x0"+Arr_1[i];
+                        else tempdata=tempdata+"0x"+Arr_1[i];
+                        tempdata+=',';
+                    }
+                    for(i=0;i<8;++i){
+                        if(Arr_2[i].length==1) tempdata=tempdata+"0x0"+Arr_2[i];
+                        else tempdata=tempdata+"0x"+Arr_2[i];
+                        tempdata+=',';
+                    }
+                    tempdata+='<br><br><br>右邊字元：<br>';
+                    for(i=0;i<8;++i){
+                        if(Arr_3[i].length==1) tempdata=tempdata+"0x0"+Arr_3[i];
+                        else tempdata=tempdata+"0x"+Arr_3[i];
+                        tempdata+=',';
+                    }
+                    for(i=0;i<8;++i){
+                        if(Arr_4[i].length==1) tempdata=tempdata+"0x0"+Arr_4[i];
+                        else tempdata=tempdata+"0x"+Arr_4[i];
+                    tempdata+=',';
+                    }
+
+                    $('.showinfo').append(tempdata);
+                    
+                    console.log(Arr_1)
+                    console.log(Arr_2)
+                    console.log(Arr_3)
+                    console.log(Arr_4)
+                })
+            });
+        </script>
+    </div>
+</body>
+</html>
