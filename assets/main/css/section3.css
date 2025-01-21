@@ -1,0 +1,83 @@
+.section3{
+    margin-top: 50px;
+}
+.section3 .section_title,
+.section3 .section_description,
+.section3 .section_content{
+    z-index: 2;
+}
+
+.section3 .section_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../../media/wall.jpg");
+    height: 100%;
+    width: 100%;
+    opacity: 65%;
+    z-index: 1;
+}
+
+.section3 .section_content a{
+    display: block;
+    background-color: rgb(60, 60, 60);
+    text-decoration: none;
+    color:whitesmoke;
+    width: 80%;
+    text-align: center;
+    padding: 10px 0px;
+    margin-left: 10%;
+    font-size: 20px;
+    isolation: isolate; /* 新增 */
+    border-radius: 30px !important;
+    -webkit-border-radius:30px !important;
+    transition: all .35s;
+    box-shadow:0  0  0  2px  black;
+    margin-bottom: 20px;
+}
+.section3 .section_content a:hover{
+    background-color: white;
+    color:black;
+}
+
+.section3 .row >div{
+    padding:25px;
+}
+
+
+
+
+.mypaper_use{
+    border-top: 1px solid rgb(74, 74, 74);
+    border-bottom: 1px solid rgb(74, 74, 74);
+    padding: 5px 5px;
+    padding-bottom: 3px;
+}
+.mypaper_use >div{
+    display: inline-block;
+}
+
+.mypaper_use >div:nth-child(n+2){
+    position: relative;
+    padding-left: 15px;
+    padding-right: 5px;
+    margin-bottom: 2px;
+    border-radius: 11px;
+    border: 2px solid;
+
+}
+.mypaper_use >div:nth-child(n+2)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.mypaper_description p{
+    padding: 10px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+}
+body{
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    overflow-scrolling: touch;
+}
+div {
+    -webkit-tap-highlight-color: transparent; /* Safari, iOS */
+    -moz-tap-highlight-color: transparent; /* Firefox */
+    -ms-tap-highlight-color: transparent; /* IE */
+    tap-highlight-color: transparent; /* 其他浏览器 */
+}
+/************************/
+/**       滾動條       **/
+/************************/
+body::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+
+body::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #969695;
+    border-radius: 4px;
+}
+
+
+body::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #1f1f20bd;
+}
+
+body::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(234, 234, 234);
+}
+
+.coolbar::-webkit-scrollbar {  /* 設定滾動條寬度 */
+    width: 8px; /* 左邊可以 上下的滾動條 長度 */
+    height: 8px; /* 下面可以 左右的滾動條 長度 */
+    /*background-color: #f5f5f5; /* 設定滾動條的顏色 */
+}
+
+.coolbar::-webkit-scrollbar-thumb { /* 設定滾動條顏色/圓角 */
+    background-color: #2f72ee;
+    border-radius: 4px;
+}
+
+.coolbar::-webkit-scrollbar-thumb:hover { /* 設定滾動條移過去的顏色 */
+    background-color: #5252ff;
+}
+
+.coolbar::-webkit-scrollbar-track { /* 設定滾動條軌道的顏色 */
+    background-color: rgb(170, 249, 246);
+}
+
+#hder{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    /*background-color: #BBB; */
+    background-color: transparent;
+    transition:all .7s;
+
+}
+.sticky{
+    transition:all .7s;
+    background-color: rgb(68, 68, 68);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.header{
+    width: 1500px;
+    margin: auto;
+    overflow: hidden;
+    color:black;
+    height: 53px;
+    transition: 1s;
+}
+/* 左上角LOGO設定 */
+.logo{
+    width:80%;
+    margin-right: 2%;
+    display: flex;
+    height: 100%;
+}
+.logo img{
+    padding: 3px 0 0 5px ;
+    margin-right: 5px;
+    vertical-align: middle;
+    width:auto;
+}
+.logo a{
+    font-size: 35px;
+    color:#111;
+    text-shadow: 1.5px 1px 0.3px #999;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.logo a p{
+    display: block;
+}
+/* 控制選項 */
+#menu_control{
+    display: none;
+    position: absolute;
+    opacity: 0;
+}
+
+/* 漢堡選單 */
+.menu_btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width:40px;
+    height: 40px;
+    /* background-color: #000; 20230808漢堡優化刪除 */
+    transition: all .5s ease-in-out;
+    /* border:1px solid #fff;  20230808漢堡優化刪除 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* 漢堡選單-三條線 */
+.menu_btn_burger{
+    width: 30px;
+    height: 2.5px;
+    /* background-color: #ccc; 20230808漢堡優化刪除 */
+    background-color: #000;
+    border-radius: 5px;
+    /* box-shadow: 0 0 3px #fb0; 20230808漢堡優化刪除 */
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+
+    transition: all .5s ease-in-out;
+}
+.menu_btn_burger::before,
+.menu_btn_burger::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2.5px;
+    /* background-color: #ccc; 20230808漢堡優化刪除 */
+    background-color: #000;
+    border-radius: 5px;
+    /* box-shadow: 0 0 3px #fb0; 20230808漢堡優化刪除 */
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+    transition: all .5s ease-in-out;
+}
+.menu_btn_burger::before{
+    transform: translateY(-8px);
+}
+.menu_btn_burger::after{
+    transform: translateY(8px);
+}
+.header:has(#menu_control:checked){
+    background-color: white !important;
+}
+/* 漢堡選單to打叉動畫 */
+#menu_control:checked ~ .menu_btn .menu_btn_burger{
+    transform:translateX(-40px);
+    transition: .5s;
+    background: transparent;
+    box-shadow: none;
+    box-shadow: 0 0 0px rgb(0, 0, 0);
+    visibility: hidden;
+}
+#menu_control:checked ~ .menu_btn .menu_btn_burger::before{ /*右上斜左下線*/
+    opacity: 1;
+    transform: rotate(45deg)
+    translateX(28px)
+    translateY(-28px);
+    visibility: visible; /* 顯示偽元素 */
+}
+#menu_control:checked ~ .menu_btn .menu_btn_burger::after{ /*左上斜右下線*/
+    transform: rotate(-45deg)
+    translateX(28px)
+    translateY(28px);
+    visibility: visible; /* 顯示偽元素 */
+
+}
+
+#menu_control:checked ~ .menu{
+    left:0px;
+}
+#menu_control:checked ~ .menu a::after{
+    transition: 5s;
+}
+/* 選單設定 */
+.menu{
+    opacity: 95%;
+    position: absolute;
+    padding-top: 10px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    /* background-color: #111; */
+
+    background-color:white;
+    color:#000;
+    transition: .5s;
+    left: -100%;
+    overflow: auto;
+}
+.menu nav{
+    height: 100%;
+}
+.menu a{
+    /* background-color: #222; */
+    height: 70px;
+    background-color: #fff  ;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 20px;
+    /* color:#fff; */
+    color:black;
+    margin: 0px 15px;
+    padding: 15px 25px;
+    display: block;
+    overflow:hidden;
+}
+
+.menu a:hover{
+    transition: all .38s;
+    background-color: #555;
+    color:#eee ;
+}
+.menu a i{
+    font-size: 27px;
+    transform:translateY(3px);
+}
+
+.menu a::after{
+    content:'';
+    position: absolute;
+    height: 1px;
+    width:calc(100% - 30px);
+    left: 15px;
+    top: 80px;
+    background-color: #000;
+    margin: auto;
+    /* box-shadow: 0px 70px 0px #fa0,
+    0px 70px 0px #fa0,0px 140px 0px #fa0,
+    0px 210px 0px #fa0,0px 280px 0px #fa0,
+    0px 350px 0px #fa0,0px -70px 0px #fa0; */
+
+    box-shadow: 0px 0px 0px #000,
+    0px 70px 0px #000,0px 140px 0px #000,
+    0px 210px 0px #000,0px 280px 0px #000,
+    0px 350px 0px #000,0px -70px 0px #000;
+    box-sizing:none;
+}
+.GoTop{
+    right: 0%;
+    position: fixed;
+    bottom: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color:aliceblue;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    text-decoration: none;
+    transition: .2s ease-in;
+    opacity: 0%;
+    z-index: 99;
+}
+.GoTop:hover{
+    background-color: rgb(240, 202, 154);
+    color:rgb(68, 68, 68)
+}
+
+/**********   平板規格以上 (桌機)   **********/
+@media screen and (min-width:1120px) {
+    .header{
+        width: 100%;
+        position: fixed;
+        background-color: transparent;
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+    }
+    .menu{
+
+        transition: 0s;
+    }
+    .menu_btn{
+        display: none;
+    }
+    .menu a::after{
+        display: none;
+    }
+    .logo{
+        margin: 0;
+        width:36%;
+    }
+    .logo img{
+        margin:0;
+    }
+    .menu{
+        left: 0;
+        padding: 0;
+        margin-right: 0%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        background-color: transparent;
+        width: 100%;
+        height: 53px;
+        font-size: 0;
+    }
+
+    .menu a{
+        width: 115px;
+        display:inline-block;
+        line-height:53px;
+        margin: 0;
+        padding: 0 5px;
+        height: 100%;
+        color:#000;
+        background-color: transparent;
+        border-bottom: 1.5px solid transparent;
+        position: relative;
+        border-bottom: 1px solid transparent;
+    }
+    .menu a:hover{
+        transition: all .38s;
+        height: auto - 3px;
+        background-color: #555;
+        color:#eee ;
+        border-bottom: 1.5px solid #f00;
+    }
+    #hder {
+        display: flex;
+        position: fixed;
+        width: 100%;
+    }
+    .GoTop{
+        height: 80px;
+        width: 80px;
+        font-size: 25px;
+        right: -100px;
+        bottom: 15px;
+    }
+}
