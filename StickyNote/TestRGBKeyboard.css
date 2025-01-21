@@ -1,0 +1,277 @@
+
+.keyboardlogP{
+    overflow: auto;
+    height: 500px;
+    display: block;
+    border:4px black solid;
+}
+.keyboardlog{
+    text-align: center;
+}
+.log_tr_bck th,.log_tr_bck td{
+    background-color: rgb(255, 196, 0);
+}
+*{
+    ime-mode: disabled;
+}
+#slider span{
+    background-color: rgb(73, 73, 73) !important;
+}
+#slider span:hover{
+    background-color: gray !important;
+}
+#slider span:active{
+    background-color: rgb(253, 224, 116) !important;
+}
+#slider::after{
+    content:"快";
+    position: absolute;
+    top: -40px;
+    left: 1%;
+    color:rgb(255, 94, 94);
+    box-shadow: 0px 0px 3px 3px rgb(255, 0, 0);
+}
+#slider::before{
+    content:"慢";
+    position: absolute;
+    top: -40px;
+    right: 1%;
+    color:rgb(2, 86, 255);
+    box-shadow: 0px 0px 3px 3px rgb(0, 0, 255);
+}
+.choosecolor{
+    margin-top: 5px;
+    background-color: rgb(204, 204, 204);
+    color:black;
+}
+.myoption{
+    border: black 2px solid;
+}
+.myoption .col-12{
+    /* height: 130px; */
+    padding: 15px;
+    /* width: 100%; */
+    background-color: rgb(39, 39, 39);
+    color:white;
+    border:white solid 5px;
+    font-size: 30px;
+    text-align: center;
+}
+.myoption .col-12:nth-child(2){
+    cursor: pointer;
+}
+.myoption .col-12:nth-child(2):hover{
+    background-color: gray;
+    color:white;
+}
+.ICON_turn{
+    position: relative;
+    margin-top: 10px;
+    box-shadow: 0px 0px 1px 4px white;
+    /* border:white 5px solid; */
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    /* overflow: hidden; */
+
+}
+
+.ICON_turn .color{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    border-radius: 30px !important;
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    transition: all ease-in .2s;
+
+}
+.ICON_turn .circle{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    left:5px;
+    border-radius: 35px;
+    background-color: white;
+    transition: all ease-in .2s;
+
+}
+#RGB_control{
+    display: none;
+}
+#RGB_control:checked ~ .color{
+    width: 98%;
+    width: calc(100% - 10px);
+}
+#RGB_control:checked ~ .circle{
+    left: calc(100% - 35px);
+}
+.container{
+    position: relative;
+    margin-top: 80px;
+    z-index: 3;
+}
+.keyboardcol{
+    /* overflow: auto; */
+    /* width: 2900px !important; */
+    scale: 0.8;
+    transform-origin: left center;
+
+    /* overflow: auto; */
+}
+.keyboard{
+    position: relative;
+    padding: 20px;
+    margin-top: 0px;
+    padding-bottom: 200px;
+    background-color: black;
+    width: 1615px ;
+    border:black solid 3px;
+    border-radius: 10px;
+    /* scale: 0.8; */
+    transform-origin: left center;
+    overflow: hidden;
+}
+.keyboard::before{
+
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom:30px;
+    transform: translateX(-50px);
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    z-index: 99;
+    background-size: 50px 50px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    filter: invert(35%);
+}
+.keyboard::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 10px);
+    height: 170px;
+    margin: 5px;
+    background-color: rgb(54, 54, 54);
+}
+.keyboard >div{
+    color:white;
+}
+.keyboard >div >div{
+    display: inline-block; /* 重點 */
+    width: 60px;
+    height: 60px;
+    background-color: rgb(60, 60, 60);
+    line-height: 60px;
+    text-align: center;
+    margin-left: 3px;
+    margin-top: 4px;
+    margin-right: 0px;
+    font-size: 130%;
+    font-size: 20px;
+    box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+    overflow: hidden;
+    border: black solid 3px;
+    border-radius: 3px;
+    /* animation: RGBhoxi 15s  infinite; */
+    /* box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+    animation: hoxi 3s infinite; */
+    user-select: none;
+}
+@keyframes hoxi{
+
+    0%{
+
+    }
+    50% {
+        box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0);
+        color:rgb(98, 98, 98)
+    }
+    100%{
+    }
+}
+/* @keyframes RGB{
+    0%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 0, 0);
+        color:rgb(255, 0, 0);
+    }
+    16%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 255, 0);
+        color:rgb(255, 255, 0);
+    }
+    33%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 255, 0);
+        color:rgb(0, 255, 0);
+    }
+    49%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 255, 255);
+        color:rgb(0, 255, 255);
+    }
+    68%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 0, 255);
+        color:rgb(0, 0, 255);
+    }
+    84%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 0, 255);
+        color:rgb(255, 0, 255);
+    }
+    100%{
+        box-shadow: 0px 0px 8px 8px red;
+        color:rgb(255, 0, 0);
+    }
+} */
+@keyframes RGBhoxi{
+    6%,18%,31%,43%,56%,68%,81%,93%{
+        box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0);
+        color:rgb(98, 98, 98)
+    }
+    0%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 0, 0);
+        color:rgb(255, 0, 0);
+    }
+    12.5%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 128, 0);
+        color:rgb(255, 128, 0);
+    }
+    25%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 255, 0);
+        color:rgb(255, 255, 0);
+    }
+    37.5%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 255, 0);
+        color:rgb(0, 255, 0);
+    }
+    50%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 255, 255);
+        color:rgb(0, 255, 255);
+    }
+    62.5%{
+        box-shadow: 0px 0px 8px 8px rgb(0, 0, 255);
+        color:rgb(0, 0, 255);
+    }
+    75%{
+        box-shadow: 0px 0px 8px 8px rgb(211, 0, 211);
+        color:rgb(255, 0, 255);
+    }
+    87.5%{
+        box-shadow: 0px 0px 8px 8px rgb(255, 255, 255);
+        color:rgb(255, 255, 255);
+    }
+    100%{
+        box-shadow: 0px 0px 8px 8px red;
+        color:rgb(255, 0, 0);
+    }
+}
+
+.keyboard >div >div:hover{
+    background-color: rgb(255, 255, 255) !important;
+    color:rgb(0, 0, 0) !important;
+    cursor: pointer;
+    transition: all .15s;
+}
