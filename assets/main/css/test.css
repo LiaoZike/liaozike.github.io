@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: calc(var(--dvh, 1dvh) * 100);
+    /* height: calc(var(--dvh, 1dvh) * 100); */
     background-size:100%;
     overflow: hidden;
 }
@@ -22,7 +22,7 @@ body{
     /* -webkit-filter:hue-rotate(180deg) brightness(.3);*/
     /* -webkit-filter:brightness(.4); */
     /*background-color: rgb(255, 253, 250) ;*/
-    height: calc(var(--dvh, 1dvh) * 100);
+    /* height: calc(var(--dvh, 1dvh) * 100); */
     width: 100%;
     opacity: 0.90;
     z-index: -3;
@@ -283,75 +283,6 @@ body{
 
 
 
-.section7{
-    margin-top: 50px;
-    position: relative;
-    width: 100%;
-    margin-bottom: 200px;
-}
-.section7_title{
-    background-color: rgb(137, 186, 255);
-}
-.section7_description{
-    box-shadow: 5px 2px 3px 3px rgb(137, 186, 255);
-}
-.section7_content{
-    margin-top: 50px;
-}
-
-
-.section9{
-    margin-top: 50px;
-    position: relative;
-    width: 100%;
-    margin-bottom: 200px;
-}
-
-.section9_title{
-    background-color: rgb(255, 255, 255);
-}
-
-.section9_description{
-    box-shadow: 5px 2px 3px 3px rgb(255, 255, 255);
-}
-.section9_content{
-    margin-top: 50px;
-}
-.section9 a{
-    text-decoration: none;
-    background-color: #eee;
-    color:black;
-    padding: 20px;
-    border-radius: 10px;
-}
-.section9 a:hover{
-    background-color: #e3ea8a;
-    transition: all .5s;
-}
-
-
-
-
-.section8 a{
-    margin-top: 20  px;
-    display: block;
-    width: 100% !important;
-    text-align: center;
-    font-size: 50px; /*20px 3dvh*/
-    line-height: 100px;
-    color:white;
-    box-shadow: 0px 0px 3px 4px rgb(255, 201, 201);
-    background-color: rgb(236, 178, 255);
-    border-radius: 200px;
-    transition: all .5s;
-    text-decoration: none;
-    border:#000 solid 4px;
-}
-
-.section8 a:hover{
-    background-color: aliceblue;
-    color:black;
-}
 /**********   平板規格以上 (桌機)   **********/
 @media screen and (min-width:880px) {
 
@@ -363,9 +294,6 @@ body{
     }
     .Welcome_btn{
         height: 12dvh;
-    }
-    .section0 {
-        height: 100dvh;
     }
 
     .sect1_more{
