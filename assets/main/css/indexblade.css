@@ -7,9 +7,9 @@
 }
 
 .section_title {
-    height: 30vh;
+    height: 30dvh;
     width: 100%;
-    line-height: 30vh;
+    line-height: 30dvh;
     text-align: center;
     font-size: 10vmin;
     overflow: hidden;
@@ -22,8 +22,8 @@
 }
 
 .section_description{
-    font-size: min(50px,3vh,4vw); /*20px 3vh*/
-    line-height: calc(min(50px,3vh,5vw) + 10px);
+    font-size: min(50px,3dvh,4vw); /*20px 3dvh*/
+    line-height: calc(min(50px,3dvh,5vw) + 10px);
     padding: 20px 60px;
     color:white;
 }
