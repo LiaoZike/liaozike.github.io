@@ -29,7 +29,20 @@ function setViewportHeight() {
   const section11 = document.querySelector('.section11');
   section11.style.height = `${customHeight}px`; // 動態設定高度
 }
-// window.addEventListener('resize', setViewportHeight);
+
+function isDesktopDevice() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/.test(userAgent);
+
+    const isWideScreen = window.innerWidth > 1024;
+
+    return !isMobile && isWideScreen;
+}
+
+if (isDesktopDevice()) {
+    window.addEventListener('resize', setViewportHeight);
+}
+
 
 
 
