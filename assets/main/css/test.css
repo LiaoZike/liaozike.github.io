@@ -52,7 +52,7 @@ body{
 }
 
 .Welcome video{
-    margin-top: 20dvh;
+    /* margin-top: 20dvh; */
     border-radius:10px;
     display: block;
     width: 100%;
@@ -142,7 +142,7 @@ body{
     /* background-color: #222;
     background-color: #2222228e; */
     opacity: 100%;
-    height: calc(250dvh - 53px);
+    /* height: calc(250dvh - 53px); */
     width: 100%;
     position: relative;
     overflow:hidden;
@@ -150,7 +150,7 @@ body{
 }
 .sect2_content{
     color:#fff;
-    height: calc(100dvh - 53px);
+    /* height: calc(100dvh - 53px); */
     width: 100%;
 } /*重要*/
 .sect2_title{
@@ -164,7 +164,7 @@ body{
     width: 100%;
     position: relative;
     color:#eee;
-    font-size: min(15dvh,15vw);
+    /* font-size: min(15dvh,15vw); */
     -webkit-text-stroke: 1px rgb(251, 245, 152);
     text-shadow: 0px 0px 8px rgb(255, 217, 0);
     margin: 5px;
@@ -195,7 +195,7 @@ body{
     margin: 5px;
     margin-top: 40px;
     box-shadow: 0 0 10px rgb(250, 233, 186);
-    font-size: min(50px,3dvh,5vw);
+    /* font-size: min(50px,3dvh,5vw); */
     transform: scale(0);
     animation: borderbreathing 4s linear infinite;
     transition: transform linear .2s;
@@ -287,12 +287,12 @@ body{
     .sect2_title{
         margin-top: max(5%,100px);
     }
-    .Welcome video{
+    /* .Welcome video{
         margin-top: 20dvh;
     }
     .Welcome_btn{
         height: 12dvh;
-    }
+    } */
 
     .sect1_more{
         font-size: 2vw;
