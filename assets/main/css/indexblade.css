@@ -1,4 +1,3 @@
-
 .section{
     position: relative;
     width: 100%;
@@ -7,18 +6,13 @@
 }
 
 .section_title {
-    height: 30dvh;
+    padding-top: 80px;
+    padding-bottom: 70px;
     width: 100%;
-    line-height: 30dvh;
+    line-height: 100%;
     text-align: center;
     font-size: 10vmin;
     overflow: hidden;
-}
-.section_title p{
-    display: block;
-    height: 100%;
-    width: 100%;
-    font-size: 1em;
 }
 
 .section_description{

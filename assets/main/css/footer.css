@@ -1,7 +1,7 @@
 .footer{
     font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif !important;
     margin-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -9,9 +9,6 @@
     height: 100px;
     width: 100%;
     background-color: rgb(157, 135, 135);
-    /* overflow: hidden; */
-    border-top-left-radius: 30%;
-    border-top-right-radius: 30%;
 }
 .footer p{
     color:white;
@@ -19,5 +16,4 @@
     width: 100%;
     padding-top: 50px;
     text-align: center;
-    font-size: 2vw;
 }
