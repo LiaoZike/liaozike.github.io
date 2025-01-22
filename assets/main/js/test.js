@@ -27,6 +27,11 @@ function setViewportHeight() {
   elements.forEach(element => {
     element.style.height = `${viewportHeight}px`;
   });
+  
+  const customHeight = (viewportHeight * 2.5) - 53; // 計算高度：250dvh - 53px
+
+  const section11 = document.querySelector('.section11');
+  section11.style.height = `${customHeight}px`; // 動態設定高度
 }
 // window.addEventListener('resize', setViewportHeight);
 
