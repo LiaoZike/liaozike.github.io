@@ -18,6 +18,23 @@ var sticky = hder.offsetHeight - 50;
 var scrollState=0; //
 var deviceHeight=window.innerHeight;
 var temp
+
+
+function setViewportHeight() {
+  const viewportHeight = window.innerHeight; // 實際視窗高度
+  const elements = document.querySelectorAll('.section0, .sect1_img');
+  
+  elements.forEach(element => {
+    element.style.height = `${viewportHeight}px`;
+  });
+}
+// window.addEventListener('resize', setViewportHeight);
+
+
+
+
+
+
 function myFunction() {
     TrunScorll=false;
     deviceHeight=window.innerHeight;
@@ -144,12 +161,14 @@ $(document).ready(function(){
     $('.Welcome_btn_div').click(function(){
         $(this).blur(); //移除焦點
     })
-});
 
-$(document).ready(function(){
+        
     $('.menu a').click(function(){
         var obj = document.getElementById("menu_control");
         var value=obj.checked;
         if(value==true) obj.checked=false;
     })
+
+    // 初始設置高度
+    setViewportHeight();
 });
