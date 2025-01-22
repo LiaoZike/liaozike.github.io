@@ -193,7 +193,7 @@ body{
     color:rgb(255, 255, 255);
     padding: 2%;
     margin: 5px;
-    margin-top: 40px;
+    margin-top: 40px;    
     box-shadow: 0 0 10px rgb(250, 233, 186);
     font-size: min(50px,3dvh,5vw); /*20px 3dvh*/
     transform: scale(0);
