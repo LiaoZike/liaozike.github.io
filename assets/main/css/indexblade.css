@@ -16,8 +16,8 @@
 }
 
 .section_description{
-    font-size: min(50px,3dvh,4vw); /*20px 3dvh*/
-    line-height: calc(min(50px,3dvh,5vw) + 10px);
+    font-size: min(50px,3dvh,4vw);
+    line-height: 100%;
     padding: 20px 60px;
     color:white;
 }

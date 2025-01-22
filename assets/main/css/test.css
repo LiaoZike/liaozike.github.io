@@ -129,7 +129,7 @@ body{
         transform: translateY(0px);
     }
     33%{
-        transform: translateY(-5dvh);
+        transform: translateY(20px);
     }
     66%{
         transform: translateY(0px);
@@ -163,7 +163,7 @@ body{
     display: block;
     width: 100%;
     position: relative;
-    color:#eee; /*10dvh*/
+    color:#eee;
     font-size: min(15dvh,15vw);
     -webkit-text-stroke: 1px rgb(251, 245, 152);
     text-shadow: 0px 0px 8px rgb(255, 217, 0);
@@ -194,10 +194,8 @@ body{
     padding: 2%;
     margin: 5px;
     margin-top: 40px;
-    /* height: calc(100dvh - 2 * min(15dvh,15vw) - 53 - 5 - 40%); */
-
     box-shadow: 0 0 10px rgb(250, 233, 186);
-    font-size: min(50px,3dvh,5vw); /*20px 3dvh*/
+    font-size: min(50px,3dvh,5vw);
     transform: scale(0);
     animation: borderbreathing 4s linear infinite;
     transition: transform linear .2s;
