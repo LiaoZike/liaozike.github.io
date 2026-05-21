@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="雲林微醺實驗室智慧酒單，選擇以雲林農產設計的調酒與 0% 酒感飲品。"
+    />
+    <title>雲林微醺實驗室 | 智慧酒單系統</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header home-header" aria-label="網站導覽">
+      <a class="brand-lockup" href="#top" aria-label="雲林微醺實驗室首頁">
+        <span class="brand-seal" aria-hidden="true">YL</span>
+        <span>
+          <strong>雲林微醺實驗室</strong>
+          <small>Yunlin Pour Lab</small>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主選單">
+        <a href="#menu">今晚酒單</a>
+        <a href="#origin">風味來源</a>
+        <a href="#feedback">試飲回饋</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Tonight's Yunlin Pour</p>
+          <h1 id="hero-title">雲林微醺實驗室</h1>
+          <p class="hero-subtitle">今晚，從雲林風土選一杯。</p>
+          <p class="hero-copy">
+            掃描酒單，先選今晚想喝的風味，再看杯中來自哪一塊雲林土地。
+          </p>
+          <p class="hero-meta">元長花生 / 古坑柳丁 / 古坑咖啡 / 斗六文旦</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">開始選酒</a>
+            <a class="button button-ghost-light" href="#feedback">試飲後回饋</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Bar Menu</p>
+            <h2 id="menu-title">今晚酒單</h2>
+          </div>
+          <p>
+            每杯先給風味、酒感與必要提醒。想多看一點，再打開它的產地故事。
+          </p>
+        </div>
+
+        <div class="filter-group" role="toolbar" aria-label="飲品分類篩選">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">
+            全部
+          </button>
+          <button class="filter-button" type="button" data-filter="cocktail" aria-pressed="false">
+            酒精調酒
+          </button>
+          <button class="filter-button" type="button" data-filter="zero" aria-pressed="false">
+            0% 酒感飲品
+          </button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section origin-section" id="origin" aria-labelledby="origin-title">
+        <div class="section-heading origin-heading">
+          <div>
+            <p class="eyebrow">Origin Notes</p>
+            <h2 id="origin-title">杯中的雲林風味</h2>
+          </div>
+          <p>
+            對哪一種原料好奇，就點開它的來源與風味筆記。這裡把產地資訊留給想多看一眼的客人。
+          </p>
+        </div>
+
+        <div class="origin-lab">
+          <div class="produce-switches" id="produce-switches" role="tablist" aria-label="農產風土切換"></div>
+
+          <article class="origin-story" id="origin-story" aria-live="polite">
+            <div class="origin-story-head">
+              <div>
+                <p class="origin-kicker" id="origin-kicker"></p>
+                <h3 id="origin-name"></h3>
+              </div>
+              <span class="origin-stamp" id="origin-origin"></span>
+            </div>
+
+            <p class="origin-lead" id="origin-lead"></p>
+
+            <div class="origin-notes">
+              <section>
+                <h4>在這杯裡</h4>
+                <p id="origin-role"></p>
+              </section>
+              <section>
+                <h4>風味提示</h4>
+                <p id="origin-notes"></p>
+              </section>
+            </div>
+
+            <ol class="route-steps" id="origin-route" aria-label="從產地到酒杯流程"></ol>
+
+            <div class="origin-pours">
+              <p>可點飲品</p>
+              <div id="origin-drinks"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section feedback-section" id="feedback" aria-labelledby="feedback-title">
+        <div class="section-heading feedback-heading">
+          <div>
+            <p class="eyebrow">Guest Feedback</p>
+            <h2 id="feedback-title">試飲回饋</h2>
+          </div>
+          <p>喝完後留下口感偏好，讓下一輪酒單更靠近今晚的真實反應。</p>
+        </div>
+
+        <form class="feedback-form" id="feedback-form">
+          <label class="field field-wide">
+            <span>選擇飲品</span>
+            <select id="drink-select" name="drink" required></select>
+          </label>
+
+          <fieldset class="rating-field">
+            <legend>甜度評分</legend>
+            <div class="score-group" data-score-group="sweetness"></div>
+          </fieldset>
+
+          <fieldset class="rating-field">
+            <legend>酸度評分</legend>
+            <div class="score-group" data-score-group="acidity"></div>
+          </fieldset>
+
+          <fieldset class="rating-field">
+            <legend>酒感 / 酒吧感評分</legend>
+            <div class="score-group" data-score-group="bar-feel"></div>
+          </fieldset>
+
+          <fieldset class="rating-field">
+            <legend>香氣評分</legend>
+            <div class="score-group" data-score-group="aroma"></div>
+          </fieldset>
+
+          <fieldset class="rating-field">
+            <legend>整體滿意度</legend>
+            <div class="score-group" data-score-group="satisfaction"></div>
+          </fieldset>
+
+          <fieldset class="choice-field">
+            <legend>是否願意再次點購</legend>
+            <div class="choice-group">
+              <label>
+                <input type="radio" name="reorder" value="yes" required />
+                <span>是</span>
+              </label>
+              <label>
+                <input type="radio" name="reorder" value="no" />
+                <span>否</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <label class="field field-wide">
+            <span>其他建議</span>
+            <textarea
+              name="suggestion"
+              rows="4"
+              placeholder="例如：想再清爽一點、喜歡咖啡尾韻、希望加入更多雲林果香。"
+            ></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">送出回饋</button>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>雲林微醺實驗室｜虎科大夢想館 Pop-up 酒吧提案</p>
+      <p>社會責任實踐課程 Demo</p>
+      <a href="admin.html">查看後台測試</a>
+    </footer>
+
+    <dialog class="drink-dialog" id="drink-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="關閉詳細介紹">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="dialog-layout">
+        <figure class="dialog-visual">
+          <img id="dialog-image" src="" alt="" />
+        </figure>
+        <div class="dialog-content">
+          <p class="eyebrow" id="dialog-type"></p>
+          <h2 id="dialog-title"></h2>
+          <p class="dialog-intro" id="dialog-intro"></p>
+          <dl class="dialog-list">
+            <div>
+              <dt>使用農產與產地</dt>
+              <dd id="dialog-produce"></dd>
+            </div>
+            <div>
+              <dt>風味描述</dt>
+              <dd id="dialog-flavor"></dd>
+            </div>
+            <div>
+              <dt>酒精濃度</dt>
+              <dd id="dialog-abv"></dd>
+            </div>
+            <div>
+              <dt>過敏提醒</dt>
+              <dd id="dialog-allergy"></dd>
+            </div>
+          </dl>
+          <section class="practice-note" aria-labelledby="practice-title">
+            <h3 id="practice-title">在地風味設計</h3>
+            <p>
+              這杯選用雲林在地農產作為風味起點，讓產地特色不只被看見，也能在今晚的香氣、口感與尾韻裡被記住。
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
